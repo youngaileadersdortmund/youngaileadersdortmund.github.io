@@ -4,4 +4,4 @@ This repository entails a static webpage with information on the Dortmund Hub, w
 
 ![Dortmund Hub Logo](./call_for_applications.png)
 
-Visit [our homepage](www.youngaileadersdortmund.github.io) for all details.
+Visit [our homepage](https://youngaileadersdortmund.github.io) for all details.
