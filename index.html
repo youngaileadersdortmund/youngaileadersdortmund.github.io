@@ -108,7 +108,43 @@
             </p>
             </div>
         </div>
-        <div style="height: 160px;"></div>
+        <div style="height: 10px;"></div>
+        <div class="container">
+            <h3>Unser Team</h3>
+            <div id="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 20px; margin-bottom: 16px;">
+                <img src="members/1.png" alt="Member Introduction" style="width:100%;border-radius:16px;">
+                <img src="members/2.png" alt="Member Introduction" style="width:100%;border-radius:16px;">
+                <img src="members/3.png" alt="Member Introduction" style="width:100%;border-radius:16px;">
+                <img src="members/4.png" alt="Member Introduction" style="width:100%;border-radius:16px;display:none;">
+                <img src="members/5.png" alt="Member Introduction" style="width:100%;border-radius:16px;display:none;">
+                <img src="members/6.png" alt="Member Introduction" style="width:100%;border-radius:16px;display:none;">
+                <!-- Add more images as needed, with display:none -->
+            </div>
+            <button id="show-more-btn" style="background:#fff;color:#c5227b;border:2px solid #c5227b;border-radius:20px;padding:6px 18px;font-weight:bold;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.08);transition:background 0.2s;">
+        Mehr anzeigen
+    </button>
+    <button id="show-less-btn" style="background:#fff;color:#c5227b;border:2px solid #c5227b;border-radius:20px;padding:6px 18px;font-weight:bold;cursor:pointer;box-shadow:0 2px 6px rgba(0,0,0,0.08);transition:background 0.2s; display:none;">
+        Weniger anzeigen
+    </button>
+    </div>
+    <script>
+        const showMoreBtn = document.getElementById('show-more-btn');
+        const showLessBtn = document.getElementById('show-less-btn');
+        const imgs = document.querySelectorAll('#team-grid img');
+
+        showMoreBtn.onclick = function() {
+            imgs.forEach((img, idx) => { if(idx > 2) img.style.display = ''; });
+            showMoreBtn.style.display = 'none';
+            showLessBtn.style.display = '';
+        };
+
+        showLessBtn.onclick = function() {
+            imgs.forEach((img, idx) => { if(idx > 2) img.style.display = 'none'; });
+            showLessBtn.style.display = 'none';
+            showMoreBtn.style.display = '';
+        };
+    </script>
+        <div style="height: 10px;"></div>
         <div class="container">
             <h3>Weitere Informationen</h3>
             <p>Durch Initiativen wie die <a href="https://aiforgood.itu.int/young-ai-leaders-community/" target="_blank">Young AI Leaders</a> stellt AI for Good sicher, dass junge Menschen die Fähigkeiten, Plattformen und Unterstützung erhalten, um eine <strong>inklusive und nachhaltige</strong> digitale Zukunft zu gestalten.
