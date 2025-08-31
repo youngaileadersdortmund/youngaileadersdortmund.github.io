@@ -29,11 +29,12 @@
         }
         .container {
             max-width: 800px;
-            margin: auto;
-            padding: 4px;
+            margin: 16px auto;
+            padding: 16px;
             background: rgba(255, 255, 255, 0.75);
             border-radius: 30px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+            box-sizing: border-box;
         }
         h1, h2, h3{
             color: #c5227b;
@@ -46,7 +47,8 @@
             font-weight: bold;
         }
         .logo {
-            width: 180px;
+            width: 140px;
+            max-width: 40vw;
         }
         .lang-toggle {
             position: fixed;
@@ -65,6 +67,30 @@
         }
         .lang-toggle:hover {
             background: #edd9c9;
+        }
+        @media (max-width: 600px) {
+            h1, h2, h3 {
+                font-size: 1.2em;
+            }
+            .container {
+                padding: 8px;
+                border-radius: 16px;
+            }
+            .logo {
+                width: 90px;
+                margin: 0 10px !important;
+            }
+            .lang-toggle {
+                top: 10px;
+                right: 10px;
+                padding: 4px 10px;
+                font-size: 0.95em;
+            }
+            /* Make flex containers stack vertically */
+            .container[style*="display: flex"] {
+                flex-direction: column !important;
+                align-items: center !important;
+            }
         }
     </style>
     <script>
@@ -99,8 +125,8 @@
             <div>
                 <p>Als lokale Community unter der <strong>UN AI for Good</strong> Plattform
                     <br>befähigen wir junge Menschen, KI auf positive Weise zu nutzen.
-                    <br>Aktuelle Informationen findet man auf <a href="https://www.linkedin.com/company/young-ai-leaders-dortmund/" target="_blank">LinkedIn</a> oder <a href="https://discord.gg/QZBnSG7w9z" target="_blank">Discord!</a>
-                    <br>Unser <strong>nächstes Treffen</strong> findet am <a href="https://discord.gg/sbzWNtgTdb?event=1395028911179431946" target="_blank">29. August ab 19 Uhr statt!</a> 
+                    <br>Wir sind auf <a href="https://www.linkedin.com/company/young-ai-leaders-dortmund/" target="_blank">LinkedIn</a>, <a href="https://discord.gg/QZBnSG7w9z" target="_blank">Discord</a>, <a href="https://www.instagram.com/youngaileaders_dortmund/" target="_blank">Instagram</a> und <a href="https://www.tiktok.com/@youngaileaders_dortmund/" target="_blank">TikTok</a> aktiv!
+                    <br>Derzeit analysieren wir die <a href="dortmund-wahl-ki.de" target="_blank">Dortmunder Kommunalwahl mit KI.</a>
                 </p>
                 <p>Glaubst du, dass man KI für Gutes einsetzen sollte?
                 <br>Möchtest du dich mit Gleichgesinnten vernetzen<br>und Teil unserer <strong>kollaborativen Community</strong> werden?
@@ -112,16 +138,15 @@
         <div class="container">
             <h3>Weitere Informationen</h3>
             <p>Durch Initiativen wie die <a href="https://aiforgood.itu.int/young-ai-leaders-community/" target="_blank">Young AI Leaders</a> stellt AI for Good sicher, dass junge Menschen die Fähigkeiten, Plattformen und Unterstützung erhalten, um eine <strong>inklusive und nachhaltige</strong> digitale Zukunft zu gestalten.
-                <br>Als einer von 90 Hubs weltweit setzen wir KI im Raum Dortmund für Gutes ein!
+                <br>Als einer von über 100 Hubs weltweit setzen wir KI im Raum Dortmund für Gutes ein!
                 <br><strong>Weitere Informationen</strong> findet man in der <a href="https://aiforgood.itu.int/young-ai-leaders-community/community-charter/" target="_blank">Community Charter</a> und auf der <a href="https://aiforgood.itu.int/young-ai-leaders-community/" target="_blank">AI for Good</a> Homepage.
             </p>
             <p> Jede:r <strong>zwischen 18 und 30 Jahren</strong> kann sich für bis zu <strong>vier Jahre</strong> als Young AI Leader bewerben.
                 <br><strong>Diversität ist eine zentrale Stärke</strong> unserer Community, wir sind offen für alle Hintergründe!
-                <br>Bewerbungen erfolgen über ein <a href="https://aiforgood.itu.int/young-ai-leaders-community/#apply" target="_blank">Webformular</a> – klicke auf "APPLY TO JOIN A HUB" und wähle Dortmund aus!
+                <br>Bewerbungen erfolgen über ein <a href="https://aiforgood.itu.int/young-ai-leaders-community/#apply" target="_blank">Webformular</a> – auf "APPLY TO JOIN A HUB" und Dortmund klicken!
             </p>
-            <p>Unser Hub wird aktuell geleitet von
-                <a href="https://lamarr.cs.tu-dortmund.de/team/raphael-fischer" target="_blank">Raphael Fischer</a>, <a href="https://www.linkedin.com/in/nico-koltermann/" target="_blank">Nico Koltermann</a> und <a href="https://www.linkedin.com/in/bahavathy-kathirgamanathan/" target="_blank">Bahavathy Kathirgamanathan</a>.
-                <br>Wir freuen uns über <strong>Unterstützung</strong>, zum Beispiel über das Teilen von <a download="call_for_applications.png" href="call_for_applications.png">Promomaterial</a> und <a href="https://www.linkedin.com/posts/raphael-fischer-3b1046208_youngaileaders-aiforgood-trustworthiness-activity-7290672949781512193-3onE?utm_source=share" target="_blank">Social Media</a> Posts.</p>
+            <p>Derzeit leiten <a href="https://lamarr.cs.tu-dortmund.de/team/raphael-fischer" target="_blank">Raphael Fischer</a>, <a href="https://www.linkedin.com/in/nico-koltermann/" target="_blank">Nico Koltermann</a> und <a href="https://www.linkedin.com/in/bahavathy-kathirgamanathan/" target="_blank">Bahavathy Kathirgamanathan</a> unseren Hub.
+                <br>Wir freuen uns über <strong>Unterstützung</strong> und <strong>Feedback</strong> jeglicher Form - vielen Dank!</p>
             <p><strong>Hub Kontakt:</strong> dortmundhub.youngaileaders [ at ] gmail.com
             </p>
         </div>
@@ -133,8 +158,8 @@
             <div>
                 <p>As a local community under the <strong>UN AI for Good</strong> platform,
                     <br>we empower young minds to drive positive change with AI.
-                    <br>Feel free to <strong>connect</strong> with us on <a href="https://www.linkedin.com/company/young-ai-leaders-dortmund/" target="_blank">LinkedIn</a> or <a href="https://discord.gg/QZBnSG7w9z" target="_blank">Discord!</a>
-                    <br>Our <strong>next meeting</strong> takes place <a href="https://discord.gg/sbzWNtgTdb?event=1395028911179431946" target="_blank">on August 29th, at 7pm!</a> 
+                    <br>We are active on <a href="https://www.linkedin.com/company/young-ai-leaders-dortmund/" target="_blank">LinkedIn</a>, <a href="https://discord.gg/QZBnSG7w9z" target="_blank">Discord</a>, <a href="https://www.instagram.com/youngaileaders_dortmund/" target="_blank">Instagram</a>, and <a href="https://www.tiktok.com/@youngaileaders_dortmund/" target="_blank">TikTok!</a>
+                    <br>Currently we analyze the <a href="dortmund-wahl-ki.de" target="_blank">Dortmund Elections with AI.</a>
                 </p>
                 <p>Are you into AI and believe that it should be used for good?
                 <br>Do you want to connect with other forward-thinkers<br>and join our <strong>collaborative community?</strong>
@@ -155,7 +180,7 @@
             </p>
             <p>Our Hub is currently led by
                 <a href="https://lamarr.cs.tu-dortmund.de/team/raphael-fischer" target="_blank">Raphael Fischer</a>, <a href="https://www.linkedin.com/in/nico-koltermann/" target="_blank">Nico Koltermann</a> and <a href="https://www.linkedin.com/in/bahavathy-kathirgamanathan/" target="_blank">Bahavathy Kathirgamanathan</a>.
-                <br>Please <strong>help us grow</strong> by sharing our <a download="call_for_applications.png" href="call_for_applications.png">Call for Applications</a> and <a href="https://www.linkedin.com/posts/raphael-fischer-3b1046208_youngaileaders-aiforgood-trustworthiness-activity-7290672949781512193-3onE?utm_source=share" target="_blank">social media</a> posts - thank you!</p>
+                <br>We are happy about <strong>support</strong> and <strong>feedback</strong> of any kind - thank you!</p>
             <p><strong>Hub Contact:</strong> dortmundhub.youngaileaders [ at ] gmail.com
             </p>
         </div>
