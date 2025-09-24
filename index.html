@@ -1,189 +1,24 @@
 <!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Young AI Leaders - Dortmund Hub</title>
-    <style>
-        html, body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            background: url('community1_lq.jpg') no-repeat center center fixed;
-            background-size: cover;
-            color: #333;
-            text-align: center;
-            overflow-x: hidden;
-        }
-        body::before {
-            content: "";
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, #edd9c9, #c5227b);
-            background-size: cover;
-            z-index: -1;
-        }
-        .container {
-            max-width: 800px;
-            margin: 16px auto;
-            padding: 16px;
-            background: rgba(255, 255, 255, 0.75);
-            border-radius: 30px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-            box-sizing: border-box;
-        }
-        h1, h2, h3{
-            color: #c5227b;
-            text-shadow: 2px 2px 4px rgb(255, 255, 255);
-            font-weight: bold;
-        }
-        a {
-            color: #c5227b;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        .logo {
-            width: 140px;
-            max-width: 40vw;
-        }
-        .lang-toggle {
-            position: fixed;
-            top: 20px;
-            right: 30px;
-            z-index: 10;
-            background: #fff;
-            color: #c5227b;
-            border: 2px solid #c5227b;
-            border-radius: 20px;
-            padding: 6px 18px;
-            font-weight: bold;
-            cursor: pointer;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-            transition: background 0.2s;
-        }
-        .lang-toggle:hover {
-            background: #edd9c9;
-        }
-        @media (max-width: 600px) {
-            h1, h2, h3 {
-                font-size: 1.2em;
-            }
-            .container {
-                padding: 8px;
-                border-radius: 16px;
-            }
-            .logo {
-                width: 90px;
-                margin: 0 10px !important;
-            }
-            .lang-toggle {
-                top: 10px;
-                right: 10px;
-                padding: 4px 10px;
-                font-size: 0.95em;
-            }
-            /* Make flex containers stack vertically */
-            .container[style*="display: flex"] {
-                flex-direction: column !important;
-                align-items: center !important;
-            }
-        }
-    </style>
-    <script>
-        function switchLang(lang) {
-            document.documentElement.lang = lang;
-            document.getElementById('de').style.display = lang === 'de' ? '' : 'none';
-            document.getElementById('en').style.display = lang === 'en' ? '' : 'none';
-        }
-        window.onload = function() {
-            switchLang('de');
-        }
-    </script>
-</head>
-<body>
-    <button class="lang-toggle" onclick="switchLang(document.documentElement.lang === 'de' ? 'en' : 'de')">
-        <span id="toggle-text">English</span>
-    </button>
-    <script>
-        // Update button text on toggle
-        document.addEventListener('DOMContentLoaded', function() {
-            const btn = document.querySelector('.lang-toggle');
-            btn.addEventListener('click', function() {
-                const lang = document.documentElement.lang;
-                document.getElementById('toggle-text').textContent = lang === 'de' ? 'Deutsch' : 'English';
-            });
-        });
-    </script>
-    <div id="de">
-        <h1>Young AI Leaders - Dortmund Hub</h1>
-        <div class="container" style="display: flex; align-items: center;">
-            <img src="Dortmund Hub- Coloured Logo.png" alt="Young AI Leaders Hub Logo" class="logo" style="margin-left: 40px; margin-right: 40px;">
-            <div>
-                <p>Als lokale Community unter der <strong>UN AI for Good</strong> Plattform
-                    <br>befähigen wir junge Menschen, KI auf positive Weise zu nutzen.
-                    <br>Wir sind auf <a href="https://www.linkedin.com/company/young-ai-leaders-dortmund/" target="_blank">LinkedIn</a>, <a href="https://discord.gg/QZBnSG7w9z" target="_blank">Discord</a>, <a href="https://www.instagram.com/youngaileaders_dortmund/" target="_blank">Instagram</a> und <a href="https://www.tiktok.com/@youngaileaders_dortmund/" target="_blank">TikTok</a> aktiv!
-                    <br>Derzeit analysieren wir die <a href="https://dortmund-wahl-ki.de" target="_blank">Dortmunder Kommunalwahl mit KI.</a>
-                </p>
-                <p>Glaubst du, dass man KI für Gutes einsetzen sollte?
-                <br>Möchtest du dich mit Gleichgesinnten vernetzen<br>und Teil unserer <strong>kollaborativen Community</strong> werden?
-                <br>Dann bewirb dich jetzt und <a href="https://aiforgood.itu.int/young-ai-leaders-community/" target="_blank">werde ein Young AI Leader!</a>
-            </p>
-            </div>
-        </div>
-        <div style="height: 160px;"></div>
-        <div class="container">
-            <h3>Weitere Informationen</h3>
-            <p>Durch Initiativen wie die <a href="https://aiforgood.itu.int/young-ai-leaders-community/" target="_blank">Young AI Leaders</a> stellt AI for Good sicher, dass junge Menschen die Fähigkeiten, Plattformen und Unterstützung erhalten, um eine <strong>inklusive und nachhaltige</strong> digitale Zukunft zu gestalten.
-                <br>Als einer von über 100 Hubs weltweit setzen wir KI im Raum Dortmund für Gutes ein!
-                <br><strong>Weitere Informationen</strong> findet man in der <a href="https://aiforgood.itu.int/young-ai-leaders-community/community-charter/" target="_blank">Community Charter</a> und auf der <a href="https://aiforgood.itu.int/young-ai-leaders-community/" target="_blank">AI for Good</a> Homepage.
-            </p>
-            <p> Jede:r <strong>zwischen 18 und 30 Jahren</strong> kann sich für bis zu <strong>vier Jahre</strong> als Young AI Leader bewerben.
-                <br><strong>Diversität ist eine zentrale Stärke</strong> unserer Community, wir sind offen für alle Hintergründe!
-                <br>Bewerbungen erfolgen über ein <a href="https://aiforgood.itu.int/young-ai-leaders-community/#apply" target="_blank">Webformular</a> – auf "APPLY TO JOIN A HUB" und Dortmund klicken!
-            </p>
-            <p>Derzeit leiten <a href="https://lamarr.cs.tu-dortmund.de/team/raphael-fischer" target="_blank">Raphael Fischer</a>, <a href="https://www.linkedin.com/in/nico-koltermann/" target="_blank">Nico Koltermann</a> und <a href="https://www.linkedin.com/in/bahavathy-kathirgamanathan/" target="_blank">Bahavathy Kathirgamanathan</a> unseren Hub.
-                <br>Wir freuen uns über <strong>Unterstützung</strong> und <strong>Feedback</strong> jeglicher Form - vielen Dank!</p>
-            <p><strong>Hub Kontakt:</strong> dortmundhub.youngaileaders [ at ] gmail.com
-            </p>
-        </div>
-    </div>
-    <div id="en" style="display:none;">
-        <h1>Young AI Leaders - Dortmund Hub</h1>
-        <div class="container" style="display: flex; align-items: center;">
-            <img src="Dortmund Hub- Coloured Logo.png" alt="Young AI Leaders Hub Logo" class="logo" style="margin-left: 40px; margin-right: 40px;">
-            <div>
-                <p>As a local community under the <strong>UN AI for Good</strong> platform,
-                    <br>we empower young minds to drive positive change with AI.
-                    <br>We are active on <a href="https://www.linkedin.com/company/young-ai-leaders-dortmund/" target="_blank">LinkedIn</a>, <a href="https://discord.gg/QZBnSG7w9z" target="_blank">Discord</a>, <a href="https://www.instagram.com/youngaileaders_dortmund/" target="_blank">Instagram</a>, and <a href="https://www.tiktok.com/@youngaileaders_dortmund/" target="_blank">TikTok!</a>
-                    <br>Currently we analyze the <a href="https://dortmund-wahl-ki.de" target="_blank">Dortmund Elections with AI.</a>
-                </p>
-                <p>Are you into AI and believe that it should be used for good?
-                <br>Do you want to connect with other forward-thinkers<br>and join our <strong>collaborative community?</strong>
-                <br>Then apply now and <a href="https://aiforgood.itu.int/young-ai-leaders-community/" target="_blank">become a Young AI Leader!</a>
-            </p>
-            </div>
-        </div>
-        <div style="height: 160px;"></div>
-        <div class="container">
-            <h3>Additional Information</h3>
-            <p>Through initiatives like the <a href="https://aiforgood.itu.int/young-ai-leaders-community/" target="_blank">Young AI Leaders Community</a>, AI for Good ensures that young people have the skills, platforms, and support to lead the way in building a more <strong>inclusive and sustainable</strong> digital future.
-                <br>We are proud to be one of 90 hubs around the world, putting AI to good use in the area of Dortmund!
-                <br>For <strong>more information and projects</strong>, please refer to the <a href="https://aiforgood.itu.int/young-ai-leaders-community/community-charter/" target="_blank">Community Charter</a> and <a href="https://aiforgood.itu.int/young-ai-leaders-community/" target="_blank">AI for Good</a> Homepage.
-            </p>
-            <p>We explicitly welcome folks from any background - <strong>diversity is a central strength</strong> of our community!
-                <br>This means that anyone <strong>aged 18-30</strong> can apply to become a Young AI Leader for up to <strong>four years</strong>.
-                <br>Apply via the <a href="https://aiforgood.itu.int/young-ai-leaders-community/#apply" target="_blank">AI for Good webform</a> - click "APPLY TO JOIN A HUB" and select the Dortmund Hub!
-            </p>
-            <p>Our Hub is currently led by
-                <a href="https://lamarr.cs.tu-dortmund.de/team/raphael-fischer" target="_blank">Raphael Fischer</a>, <a href="https://www.linkedin.com/in/nico-koltermann/" target="_blank">Nico Koltermann</a> and <a href="https://www.linkedin.com/in/bahavathy-kathirgamanathan/" target="_blank">Bahavathy Kathirgamanathan</a>.
-                <br>We are happy about <strong>support</strong> and <strong>feedback</strong> of any kind - thank you!</p>
-            <p><strong>Hub Contact:</strong> dortmundhub.youngaileaders [ at ] gmail.com
-            </p>
-        </div>
-    </div>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Young AI Leaders - Dortmund Hub | AI for Good Community</title>
+    <meta name="description" content="Join the Young AI Leaders Dortmund Hub - empowering young people aged 18-30 to use AI for positive change under the UN AI for Good platform." />
+    <meta name="author" content="Lovable" />
+
+    <meta property="og:title" content="Young AI Leaders - Dortmund Hub | AI for Good Community" />
+    <meta property="og:description" content="Join the Young AI Leaders Dortmund Hub - empowering young people aged 18-30 to use AI for positive change under the UN AI for Good platform." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@lovable_dev" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
