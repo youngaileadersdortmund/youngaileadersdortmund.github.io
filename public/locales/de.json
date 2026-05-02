@@ -1,0 +1,42 @@
+{
+  "nav": {
+    "about": "Über uns",
+    "team": "Team",
+    "projects": "Projekte",
+    "contact": "Kontakt",
+    "join": "Tritt dem Hub bei",
+    "brand": "Young AI Leaders",
+    "english": "English",
+    "deutsch": "Deutsch"
+  },
+  "hero": {
+    "title": "Young AI Leaders - Dortmund Hub",
+    "intro": "Als lokale Community unter der UN AI for Good Plattform befähigen wir junge Menschen, KI auf positive Weise zu nutzen. Wir sind auf {{linkedin}}, {{discord}}, {{instagram}} und {{tiktok}} aktiv! Derzeit analysieren wir die {{election}} Triff uns auf dem {{christmas}} oder beim {{seminar}}",
+    "call": "Glaubst du, dass man KI für Gutes einsetzen sollte? Möchtest du dich mit Gleichgesinnten vernetzen und Teil unserer {{collaboration}} werden? Dann bewirb dich jetzt und {{apply}}"
+  },
+  "links": {
+    "linkedin": "LinkedIn",
+    "discord": "Discord",
+    "instagram": "Instagram",
+    "tiktok": "TikTok",
+    "election": "Dortmunder Kommunalwahl mit KI",
+    "christmas": "Weihnachtsmarkt am 7.12.",
+    "seminar": "Seminar am 10.12.",
+    "community": "kollaborativen Community",
+    "apply": "werde ein Young AI Leader"
+  },
+  "info": {
+    "title": "Weitere Informationen",
+    "description1": "Durch Initiativen wie die Young AI Leaders stellt AI for Good sicher, dass junge Menschen die Fähigkeiten, Plattformen und Unterstützung erhalten, um eine {{highlight}}inklusive und nachhaltige{{/highlight}} digitale Zukunft zu gestalten. Als einer von über 100 Hubs weltweit setzen wir KI im Raum Dortmund für Gutes ein! {{more}} findet man in der {{charter}} und auf der {{homepage}}",
+    "description2": "Jede:r {{highlight}}zwischen 18 und 30 Jahren{{/highlight}} kann sich für bis zu {{years}} als Young AI Leader bewerben. {{diversity}} unserer Community, wir sind offen für alle Hintergründe! Bewerbungen erfolgen über ein {{form}} – auf \"APPLY TO JOIN A HUB\" und Dortmund klicken!",
+    "description3": "Derzeit leiten {{raphael}}, {{nico}} und {{bahavathy}} unseren Hub. Wir freuen uns über {{support}} und {{feedback}} jeglicher Form - vielen Dank!",
+    "contact": "Hub Kontakt: dortmundhub.youngaileaders [ at ] gmail.com"
+  },
+  "infoParts": {
+    "more": "Weitere Informationen",
+    "years": "vier Jahre",
+    "diversity": "Diversität ist eine zentrale Stärke",
+    "support": "Unterstützung",
+    "feedback": "Feedback"
+  }
+}
