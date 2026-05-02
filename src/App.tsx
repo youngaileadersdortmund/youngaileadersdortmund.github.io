@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import './App.css';
 import NavBar from './components/NavBar';
 import HeroSection from './components/layout/HeroSection';
+import AboutSection from './components/layout/AboutSection';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -19,6 +20,7 @@ function App() {
     <>
       <NavBar onToggleLang={toggleLang} />
       <HeroSection />
+      <AboutSection />
       <div id="content">
         <h1>{t('hero.title')}</h1>
         <div className="container" style={{ display: 'flex', alignItems: 'center' }}>
