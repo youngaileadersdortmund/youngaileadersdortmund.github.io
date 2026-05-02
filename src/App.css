@@ -1,5 +1,72 @@
+/* --- HERO SECTION --- */
+.hero-section {
+  position: relative;
+  width: 100vw;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 32px;
+}
+.hero-bg {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('/community1_lq.jpg') center center/cover no-repeat;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  filter: brightness(0.7) blur(1.5px) grayscale(0.1);
+  transition: filter 0.4s;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 48px 16px 32px 16px;
+  text-align: center;
+}
+.hero-headline {
+  font-size: 2.6em;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 4px 24px rgba(45,157,94,0.35), 0 1px 0 #1a5a3a;
+  letter-spacing: 0.01em;
+  margin-bottom: 0.5em;
+  font-family: 'Google Sans', Arial, sans-serif;
+}
+.hero-subheadline {
+  font-size: 1.3em;
+  font-weight: 400;
+  color: #fff;
+  background: rgba(45,157,94,0.20);
+  border-radius: 18px;
+  padding: 0.7em 1.5em;
+  box-shadow: 0 2px 12px rgba(45,157,94,0.15);
+  font-family: 'Google Sans', Arial, sans-serif;
+  max-width: 700px;
+}
+@media (max-width: 700px) {
+  .hero-headline {
+    font-size: 1.3em;
+  }
+  .hero-subheadline {
+    font-size: 1em;
+    padding: 0.5em 0.7em;
+  }
+  .hero-content {
+    padding: 32px 4vw 24px 4vw;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&display=swap');
+
 html, body {
-  font-family: Arial, sans-serif;
+  font-family: 'Google Sans', Arial, sans-serif;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -16,7 +83,7 @@ body::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #edd9c9, #c5227b);
+  background: linear-gradient(to bottom, #e8f5e9, #2d9d5e);
   background-size: cover;
   z-index: -1;
 }
@@ -30,18 +97,19 @@ body::before {
   box-sizing: border-box;
 }
 h1, h2, h3 {
-  color: #c5227b;
+  color: #2d9d5e;
   text-shadow: 2px 2px 4px rgb(255, 255, 255);
   font-weight: bold;
+  font-family: 'Google Sans', Arial, sans-serif;
 }
 
 .navbar-brand h2 {
-  color: #fff !important;
+  color: black !important;
   text-shadow: none !important;
 }
 
 a {
-  color: #c5227b;
+  color: #2d9d5e;
   text-decoration: none;
   font-weight: bold;
 }
@@ -55,10 +123,11 @@ a {
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(197, 34, 123, 0.95);
+  color: black;
+  background: white;
   backdrop-filter: blur(10px);
   z-index: 100;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #ddd;
 }
 
 .navbar-container {
@@ -72,7 +141,7 @@ a {
 }
 
 .navbar-brand h2 {
-  color: #fff;
+  color: black;
   margin: 0;
   font-size: 1.5em;
   text-shadow: none;
@@ -86,10 +155,12 @@ a {
   gap: 25px;
   flex: 1;
   justify-content: center;
+  border-bottom: #333;
+  border: 2px;
 }
 
 .navbar-menu li a {
-  color: #fff;
+  color: black;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease;
@@ -97,22 +168,22 @@ a {
 }
 
 .navbar-menu li a:hover {
-  color: #edd9c9;
+  color: #2d9d5e;
 }
 
 .navbar .lang-toggle {
   position: static;
   top: auto;
   right: auto;
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
-  border: 2px solid #fff;
+  background: rgba(45,157,94,0.1);
+  color: #2d9d5e;
+  border: 2px solid #2d9d5e;
   padding: 6px 14px;
   font-size: 0.85em;
 }
 
 .navbar .lang-toggle:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(45,157,94,0.2);
 }
 
 body {
@@ -124,8 +195,8 @@ body {
   right: 30px;
   z-index: 10;
   background: #fff;
-  color: #c5227b;
-  border: 2px solid #c5227b;
+  color: #2d9d5e;
+  border: 2px solid #2d9d5e;
   border-radius: 20px;
   padding: 6px 18px;
   font-weight: bold;
@@ -134,7 +205,7 @@ body {
   transition: background 0.2s;
 }
 .lang-toggle:hover {
-  background: #edd9c9;
+  background: #e8f5e9;
 }
 @media (max-width: 768px) {
   .navbar-container {

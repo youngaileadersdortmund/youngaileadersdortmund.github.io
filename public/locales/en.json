@@ -10,6 +10,8 @@
     "deutsch": "Deutsch"
   },
   "hero": {
+    "headline": "Shaping the Future of AI. Rooted in Dortmund.",
+    "subheadline": "Join the Ruhr region's premier network for students, builders, and young professionals driving the next wave of Artificial Intelligence.",
     "title": "Young AI Leaders - Dortmund Hub",
     "intro": "As a local community under the UN AI for Good platform, we empower young minds to drive positive change with AI. We are active on {{linkedin}}, {{discord}}, {{instagram}}, and {{tiktok}}! Currently we analyze the {{election}} Meet us at the {{christmas}} or at the {{seminar}}",
     "call": "Are you into AI and believe that it should be used for good? Do you want to connect with other forward-thinkers and join our {{collaboration}}? Then apply now and {{apply}}"

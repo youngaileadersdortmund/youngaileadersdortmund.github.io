@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import './App.css';
 import NavBar from './components/NavBar';
+import HeroSection from './components/layout/HeroSection';
 
 function App() {
   const { t, i18n } = useTranslation();
@@ -17,7 +18,7 @@ function App() {
   return (
     <>
       <NavBar onToggleLang={toggleLang} />
-
+      <HeroSection />
       <div id="content">
         <h1>{t('hero.title')}</h1>
         <div className="container" style={{ display: 'flex', alignItems: 'center' }}>
