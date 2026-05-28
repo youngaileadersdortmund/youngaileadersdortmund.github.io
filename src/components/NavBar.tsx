@@ -8,11 +8,12 @@ function NavBar({ onToggleLang }: NavBarProps) {
   const { t, i18n } = useTranslation();
   
   const navItems = [
-    { label: t('nav.about'), href: '#about' },
-    { label: t('nav.team'), href: '#team' },
-    { label: t('nav.projects'), href: '#projects' },
-    { label: t('nav.contact'), href: '#contact' },
-    { label: t('nav.join'), href: '#join' },
+    { label: t('nav.about'), href: '/#about' },
+    { label: t('nav.events'), href: '/#events' },
+    { label: t('nav.team'), href: '/#team' },
+    { label: t('nav.projects'), href: '/#projects' },
+    { label: t('nav.contact'), href: '/#contact' },
+    { label: t('nav.join'), href: '/#join' },
   ];
 
   return (
@@ -28,7 +29,7 @@ function NavBar({ onToggleLang }: NavBarProps) {
             </li>
           ))}
         </ul>
-        <button className="lang-toggle" onClick={() => { i18n.changeLanguage(i18n.language === 'de' ? 'en' : 'de'); onToggleLang(); }}>
+        <button className="lang-toggle" onClick={onToggleLang}>
           <span>{i18n.language === 'de' ? t('nav.english') : t('nav.deutsch')}</span>
         </button>
       </div>

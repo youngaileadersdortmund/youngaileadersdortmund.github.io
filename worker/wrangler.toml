@@ -1,0 +1,10 @@
+name = "yal-dortmund-apply"
+main = "src/index.ts"
+compatibility_date = "2025-01-01"
+
+# Non-secret config goes in [vars]. Set RESEND_API_KEY as a SECRET via:
+#   wrangler secret put RESEND_API_KEY
+[vars]
+FROM_EMAIL = "onboarding@resend.dev"
+TO_EMAIL = "dortmundhub.youngaileaders@gmail.com"
+ALLOWED_ORIGINS = "https://youngaileaders-dortmund.de,http://localhost:5173"
