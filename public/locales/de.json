@@ -2,6 +2,7 @@
   "nav": {
     "about": "Über uns",
     "events": "Events",
+    "members": "Mitglieder",
     "team": "Team",
     "projects": "Projekte",
     "contact": "Kontakt",
@@ -86,6 +87,12 @@
     "submitting": "Wird gesendet…",
     "success": "Danke — deine Bewerbung ist da. Wir melden uns bald bei dir.",
     "failure": "Beim Senden deiner Bewerbung ist etwas schiefgelaufen. Bitte versuche es erneut oder schreib uns direkt eine E-Mail."
+  },
+  "members": {
+    "label": "MITGLIEDER",
+    "headline": "Lerne die Menschen kennen, die den Dortmund Hub gestalten.",
+    "position": "Member",
+    "linkedinLabel": "{{name}} auf LinkedIn öffnen"
   },
   "about": {
     "label": "ÜBER UNS",

@@ -2,6 +2,7 @@
   "nav": {
     "about": "About",
     "events": "Events",
+    "members": "Members",
     "team": "Team",
     "projects": "Projects",
     "contact": "Contact",
@@ -107,6 +108,12 @@
         "description": "Our current project: analyzing the Dortmund municipal election with AI to make it more transparent."
       }
     }
+  },
+  "members": {
+    "label": "MEMBERS",
+    "headline": "Meet the people shaping the Dortmund Hub.",
+    "position": "Member",
+    "linkedinLabel": "Open {{name}} on LinkedIn"
   },
   "about": {
     "label": "ABOUT",

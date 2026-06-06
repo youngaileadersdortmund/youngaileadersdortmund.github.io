@@ -5,7 +5,7 @@ import '../../App.css';
 function HeroSection() {
   const { t } = useTranslation();
   return (
-    <section className="hero-section">
+    <section id="home" className="hero-section">
       <div className="hero-bg"><img src="/tu_dortmunder.jpg" alt="" /></div>
       <div className="hero-overlay" />
       <div className="hero-content">

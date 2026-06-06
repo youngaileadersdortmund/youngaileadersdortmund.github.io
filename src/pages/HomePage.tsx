@@ -3,6 +3,7 @@ import HeroSection from '../components/layout/HeroSection';
 import EventsCarousel from '../components/layout/EventsCarousel';
 import AboutSection from '../components/layout/AboutSection';
 import JoinSection from '../components/layout/JoinSection';
+import MembersSection from '../components/layout/MembersSection';
 
 function HomePage() {
   const { t, i18n } = useTranslation();
@@ -10,8 +11,9 @@ function HomePage() {
   return (
     <>
       <HeroSection />
-      <EventsCarousel />
       <AboutSection />
+      <EventsCarousel />
+      <MembersSection />
 
       <section className="intro-section">
         <div className="intro-container">

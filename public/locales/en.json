@@ -2,6 +2,7 @@
   "nav": {
     "about": "About",
     "events": "Events",
+    "members": "Members",
     "team": "Team",
     "projects": "Projects",
     "contact": "Contact",
@@ -86,6 +87,12 @@
     "submitting": "Submitting…",
     "success": "Thanks — your application is in. We'll be in touch soon.",
     "failure": "Something went wrong sending your application. Please try again or email us directly."
+  },
+  "members": {
+    "label": "MEMBERS",
+    "headline": "Meet the people shaping the Dortmund Hub.",
+    "position": "Member",
+    "linkedinLabel": "Open {{name}} on LinkedIn"
   },
   "about": {
     "label": "ABOUT",

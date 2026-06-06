@@ -12,16 +12,18 @@ function ScrollToTop() {
   const { pathname, hash } = useLocation();
   useEffect(() => {
     if (hash) {
-      // Wait for the new route to mount before resolving the anchor; if it
-      // isn't there yet we still want to land at the top rather than mid-page.
       const id = hash.slice(1);
-      const el = document.getElementById(id);
-      if (el) {
-        el.scrollIntoView();
-        return;
-      }
+      window.requestAnimationFrame(() => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          return;
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+      return;
     }
-    window.scrollTo(0, 0);
+    window.scrollTo({ top: 0, behavior: 'auto' });
   }, [pathname, hash]);
   return null;
 }

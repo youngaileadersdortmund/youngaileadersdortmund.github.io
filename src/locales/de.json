@@ -2,6 +2,7 @@
   "nav": {
     "about": "Über uns",
     "events": "Events",
+    "members": "Mitglieder",
     "team": "Team",
     "projects": "Projekte",
     "contact": "Kontakt",
@@ -107,6 +108,12 @@
         "description": "Unser aktuelles Projekt: die Kommunalwahl in Dortmund mit KI-Technologie analysieren und transparent machen."
       }
     }
+  },
+  "members": {
+    "label": "MITGLIEDER",
+    "headline": "Lerne die Menschen kennen, die den Dortmund Hub gestalten.",
+    "position": "Member",
+    "linkedinLabel": "{{name}} auf LinkedIn öffnen"
   },
   "about": {
     "label": "ÜBER UNS",
