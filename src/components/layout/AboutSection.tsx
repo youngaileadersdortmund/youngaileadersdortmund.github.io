@@ -16,10 +16,7 @@ function AboutSection() {
 
         <div className="about-content">
           <div className="about-who">
-            <h3 className="about-subsection-title">{t('about.whoWeAre')}</h3>
-            <p>{t('about.description1')}</p>
-            <p>{t('about.description2')}</p>
-            <p>{t('about.description3')}</p>
+            <p dangerouslySetInnerHTML={{ __html: t('about.description') }} />
           </div>
         </div>
       </div>

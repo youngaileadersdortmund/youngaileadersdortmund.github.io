@@ -5,7 +5,7 @@ export interface EventItem {
   description: string;
 }
 
-const eventImageModules = import.meta.glob('/public/events/*.{jpg,jpeg,png}', {
+const eventImageModules = import.meta.glob('/src/assets/events/*.{jpg,jpeg,png}', {
   eager: true,
   import: 'default',
 }) as Record<string, string>;

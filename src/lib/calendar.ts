@@ -38,11 +38,13 @@ function normalizeCalendarId(value: string): string {
 }
 
 const eventImages = Object.values(
-  import.meta.glob('/public/events/*.{jpg,jpeg,png}', {
+  import.meta.glob('/src/assets/events/*.{jpg,jpeg,png}', {
     eager: true,
     import: 'default',
   }) as Record<string, string>,
 );
+
+const fallbackEventImage = eventImages[0] ?? '';
 
 function formatEventDate(value?: string): string {
   if (!value) return 'Date TBD';
@@ -110,7 +112,7 @@ export async function fetchCalendarEvents(signal?: AbortSignal): Promise<EventIt
 
   return items.slice(0, 3).map((item, index) => ({
     id: item.id ?? `calendar-${index}`,
-    image: eventImages[index % eventImages.length] ?? '/events/default.jpg',
+    image: eventImages[index % eventImages.length] ?? fallbackEventImage,
     title: item.summary || 'Upcoming event',
     description: formatEventDate(item.start?.dateTime || item.start?.date),
   }));

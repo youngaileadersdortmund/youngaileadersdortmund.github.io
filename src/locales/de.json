@@ -1,68 +1,39 @@
 {
   "nav": {
     "about": "Über uns",
-    "events": "Events",
+    "events": "Veranstaltungen",
     "members": "Mitglieder",
-    "team": "Team",
-    "projects": "Projekte",
     "contact": "Kontakt",
-    "join": "Tritt dem Hub bei",
+    "join": "Dem Hub beitreten",
     "brand": "Young AI Leaders",
-    "english": "English",
+    "english": "Englisch",
     "deutsch": "Deutsch"
   },
   "hero": {
-    "headline": "Glaubst du an verantwortungsvollen Umgang mit KI – genau hier, in Dortmund?",
-    "subheadline": "Werde Teil des führenden Netzwerks im Ruhrgebiet für Studierende, Macher:innen und Young Professionals, die die nächste Welle der Künstlichen Intelligenz vorantreiben.",
-    "title": "Young AI Leaders - Dortmund Hub",
-    "intro": "Als lokale Community unter der UN AI for Good Plattform befähigen wir junge Menschen, KI auf positive Weise zu nutzen. Wir sind auf {{linkedin}}, {{discord}}, {{instagram}} und {{tiktok}} aktiv! Derzeit analysieren wir die {{election}} Triff uns auf dem {{christmas}} oder beim {{seminar}}",
-    "call": "Glaubst du, dass man KI für Gutes einsetzen sollte? Möchtest du dich mit Gleichgesinnten vernetzen und Teil unserer {{collaboration}} werden? Dann bewirb dich jetzt und {{apply}}"
-  },
-  "links": {
-    "linkedin": "LinkedIn",
-    "discord": "Discord",
-    "instagram": "Instagram",
-    "tiktok": "TikTok",
-    "election": "Dortmunder Kommunalwahl mit KI",
-    "christmas": "Weihnachtsmarkt am 7.12.",
-    "seminar": "Seminar am 10.12.",
-    "community": "kollaborativen Community",
-    "apply": "werde ein Young AI Leader"
-  },
-  "info": {
-    "title": "Weitere Informationen",
-    "description1": "Durch Initiativen wie die Young AI Leaders stellt AI for Good sicher, dass junge Menschen die Fähigkeiten, Plattformen und Unterstützung erhalten, um eine {{highlight}}inklusive und nachhaltige{{/highlight}} digitale Zukunft zu gestalten. Als einer von über 100 Hubs weltweit setzen wir KI im Raum Dortmund für Gutes ein! {{more}} findet man in der {{charter}} und auf der {{homepage}}",
-    "description2": "Jede:r {{highlight}}zwischen 18 und 30 Jahren{{/highlight}} kann sich für bis zu {{years}} als Young AI Leader bewerben. {{diversity}} unserer Community, wir sind offen für alle Hintergründe! Bewerbungen erfolgen über ein {{form}} – auf \"APPLY TO JOIN A HUB\" und Dortmund klicken!",
-    "description3": "Derzeit leiten {{raphael}}, {{nico}} und {{bahavathy}} unseren Hub. Wir freuen uns über {{support}} und {{feedback}} jeglicher Form - vielen Dank!",
-    "contact": "Hub Kontakt: dortmundhub.youngaileaders [ at ] gmail.com"
-  },
-  "infoParts": {
-    "more": "Weitere Informationen",
-    "years": "vier Jahre",
-    "diversity": "Diversität ist eine zentrale Stärke",
-    "support": "Unterstützung",
-    "feedback": "Feedback"
+    "headline": "Glaubst du, dass KI für Gutes eingesetzt werden kann - hier, in Dortmund?",
+    "subheadline": "Werde Teil der führenden Jugendgemeinschaft im Ruhrgebiet, die sich mit der Entwicklung und dem verantwortungsvollen Einsatz künstlicher Intelligenz für nachhaltige Zwecke befasst.",
+    "title": "Young AI Leaders - Dortmund Hub"
   },
   "footer": {
     "impressum": "Impressum",
-    "datenschutz": "Datenschutz",
-    "legalNav": "Rechtliche Links"
+    "datenschutz": "Datenschutzerklärung",
+    "legalNav": "Rechtliches"
   },
   "join": {
-    "label": "TRITT DEM HUB BEI",
-    "headline": "Bewirb dich als Young AI Leader.",
-    "intro": "Wir sind offen für alle Hintergründe — <strong>Diversität ist eine zentrale Stärke</strong> unserer Community. Jede:r <strong>zwischen 18 und 30 Jahren</strong> kann sich für bis zu <strong>vier Jahre</strong> als Young AI Leader bewerben. Fülle das Formular aus und wir melden uns bei dir.",
+    "label": "DEM HUB BEITRETEN",
+    "headline": "Werde Teil der Young AI Leaders.",
+    "intro": "Menschen aus allen Hintergründen sind ausdrücklich willkommen — <strong>Diversität ist eine zentrale Stärke</strong> unserer Community. Alle <strong>zwischen 18 und 30 Jahren</strong> können sich bewerben, um bis zu <strong>vier Jahre</strong> lang Young AI Leader zu werden. Fülle einfach das Formular unten aus und wir melden uns bei dir.",
     "fields": {
       "name": "Vollständiger Name",
       "email": "E-Mail",
       "dob": "Geburtsdatum",
-      "description": "Erzähl uns von dir",
+      "description": "Erzähl uns etwas über dich",
       "cv": "Lebenslauf"
     },
     "placeholders": {
       "name": "Max Mustermann",
-      "email": "max@beispiel.de",
-      "description": "Was reizt dich an KI? Was möchtest du hier aufbauen, lernen oder beitragen? (max. 250 Wörter)"
+      "email": "max@example.com",
+      "description": "Was begeistert dich an KI? Was möchtest du hier bauen, lernen oder beitragen? (max. 250 Wörter)"
     },
     "helpers": {
       "wordCount": "{{count}} / 250 Wörter",
@@ -74,57 +45,40 @@
     "errors": {
       "nameRequired": "Bitte gib deinen Namen ein.",
       "emailRequired": "Bitte gib deine E-Mail-Adresse ein.",
-      "emailInvalid": "Das sieht nicht nach einer gültigen E-Mail-Adresse aus.",
+      "emailInvalid": "Das sieht nicht wie eine gültige E-Mail-Adresse aus.",
       "dobRequired": "Bitte gib dein Geburtsdatum ein.",
-      "dobAge": "Du musst zwischen 18 und 30 Jahren alt sein, um dich zu bewerben.",
-      "descriptionRequired": "Bitte erzähl uns ein wenig über dich.",
-      "descriptionTooLong": "Bitte unter 250 Wörter halten.",
-      "cvRequired": "Bitte hänge deinen Lebenslauf an.",
-      "cvType": "Nur PDF-, DOC- oder DOCX-Dateien werden akzeptiert.",
-      "cvSize": "Datei ist zu groß — bitte unter 5 MB halten."
+      "dobAge": "Du musst zwischen 18 und 30 Jahre alt sein, um dich zu bewerben.",
+      "descriptionRequired": "Bitte erzähle uns etwas über dich.",
+      "descriptionTooLong": "Bitte bleibe unter 250 Wörtern.",
+      "cvRequired": "Bitte füge deinen Lebenslauf hinzu.",
+      "cvType": "Es werden nur PDF-, DOC- oder DOCX-Dateien akzeptiert.",
+      "cvSize": "Die Datei ist zu groß — bitte unter 5 MB bleiben."
     },
-    "submit": "Bewerbung senden",
+    "submit": "Bewerbung abschicken",
     "submitting": "Wird gesendet…",
-    "success": "Danke — deine Bewerbung ist da. Wir melden uns bald bei dir.",
-    "failure": "Beim Senden deiner Bewerbung ist etwas schiefgelaufen. Bitte versuche es erneut oder schreib uns direkt eine E-Mail."
+    "success": "Danke — deine Bewerbung ist eingegangen. Wir melden uns bald bei dir.",
+    "failure": "Beim Senden deiner Bewerbung ist etwas schiefgelaufen. Bitte versuche es erneut oder schreibe uns direkt eine E-Mail."
   },
   "events": {
     "label": "UNSERE EVENTS",
-    "headline": "Anstehende Events",
+    "headline": "Kommende Veranstaltungen",
     "moreInfoDiscord": "Mehr Informationen auf",
-    "empty": "Neue Events werden bald bekannt gegeben!",
-    "pastEvent": "Vergangenes Event: {{title}}",
-    "prev": "Vorheriges Event",
-    "next": "Nächstes Event",
-    "goTo": "Zu Event",
-    "items": {
-      "community": {
-        "title": "Community-Treffen",
-        "description": "Regelmäßige Treffen mit Studierenden, Macher:innen und Young Professionals aus dem Ruhrgebiet."
-      },
-      "applications": {
-        "title": "Bewerbungen offen",
-        "description": "Wir nehmen laufend neue Young AI Leaders auf – bewirb dich und werde Teil des Hubs."
-      },
-      "election": {
-        "title": "Dortmunder Kommunalwahl mit KI",
-        "description": "Unser aktuelles Projekt: die Kommunalwahl in Dortmund mit KI-Technologie analysieren und transparent machen."
-      }
-    }
+    "empty": "Neue Veranstaltungen werden bald angekündigt!",
+    "pastEvent": "Vergangene Veranstaltung: {{title}}",
+    "prev": "Vorherige Veranstaltung",
+    "next": "Nächste Veranstaltung",
+    "goTo": "Zur Veranstaltung"
   },
   "members": {
     "label": "MITGLIEDER",
-    "headline": "Lerne die Menschen kennen, die den Dortmund Hub gestalten.",
-    "position": "Member",
+    "headline": "Lerne den Hub kennen.",
+    "position": "Mitglied",
     "linkedinLabel": "{{name}} auf LinkedIn öffnen"
   },
   "about": {
     "label": "ÜBER UNS",
-    "headline": "Erkunde Ideen.",
-    "headlineColored": "gestalte die Zukunft.",
-    "whoWeAre": "WER WIR SIND",
-    "description1": "Young AI Leaders Dortmund existiert, um die nächste Generation zusammenzubringen, die Künstliche Intelligenz gestaltet. Wir bauen einen Ort, an dem Menschen neue Ideen erkunden, Annahmen hinterfragen und vielversprechende Gespräche in bedeutungsvolle Arbeit umwandeln.",
-    "description2": "Wir tun dies durch einen fokussierten lokalen Hub: regelmäßige Treffen, relevante Veranstaltungen, praktischer Austausch und eine Mitgliedschaftsstruktur, die die richtigen Menschen zusammenbringt.",
-    "description3": "Unser Ziel ist einfach: Es für ehrgeizige Menschen in und um Dortmund, die Ruhrregion, leichter machen, klar über KI, Technologie und Business nachzudenken. Starke Beziehungen aufbauen und nah an den Ideen, Entwicklungen und Chancen bleiben, die zählen."
+    "headline": "Junge Talente.",
+    "headlineColored": "echte Wirkung.",
+    "description": "Gegründet im Jahr 2025 sind die <strong>Young AI Leaders Dortmund</strong> Teil der <a href=\"https://aiforgood.itu.int/young-ai-leaders-community/\" target=\"_blank\" rel=\"noreferrer\">globalen AI for Good Initiative</a>. Wir bringen eine vielfältige Community aus Studierenden, Forschenden und Fachkräften zusammen, um gemeinsam an verantwortungsvollen KI-Projekten zu arbeiten, die die Nachhaltigkeitsziele der Vereinten Nationen unterstützen. Durch starke Verbindungen zu lokalen Partnern wie dem <a href=\"https://lamarr-institute.org/\" target=\"_blank\" rel=\"noreferrer\">Lamarr-Institut</a> und <a href=\"https://rc-trust.ai/\" target=\"_blank\" rel=\"noreferrer\">RC-Trust</a> verbindet unser Hub technisches Know-how mit offener, inklusiver Zusammenarbeit. Gemeinsam entwickeln wir innovative Projekte mit realer Wirkung in Dortmund, der gesamten NRW-Region und darüber hinaus."
   }
 }
