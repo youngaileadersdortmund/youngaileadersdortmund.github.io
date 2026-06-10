@@ -1,34 +1,18 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getFallbackEvents, type EventItem } from '../../data/events';
-import { fetchDriveEvents, isDriveConfigured, type DriveEvent } from '../../lib/drive';
+import { fetchCalendarEvents } from '../../lib/calendar';
 import '../../App.css';
 
 const SLIDE_INTERVAL_MS = 5000;
 
-type Lang = 'de' | 'en';
-
-function driveToEventItems(drive: DriveEvent[], lang: Lang): EventItem[] {
-  return drive.map((d) => ({
-    id: d.id,
-    image: d.image,
-    title: d.title[lang] || d.title.de || d.title.en,
-    description: d.description[lang] || d.description.de || d.description.en || '',
-  }));
-}
-
 function EventsCarousel() {
-  const { t, i18n } = useTranslation();
-  const lang: Lang = i18n.language.startsWith('en') ? 'en' : 'de';
+  const { t } = useTranslation();
 
-  const fallback = useMemo(() => getFallbackEvents(t), [t, i18n.language]);
-  const [driveCache, setDriveCache] = useState<DriveEvent[] | null>(null);
+  const events = useMemo<EventItem[]>(() => getFallbackEvents(), []);
 
-  const events: EventItem[] = useMemo(() => {
-    if (driveCache && driveCache.length > 0) return driveToEventItems(driveCache, lang);
-    return fallback;
-  }, [driveCache, fallback, lang]);
-
+  const [upcomingEvents, setUpcomingEvents] = useState<EventItem[]>([]);
+  const [calendarStatus, setCalendarStatus] = useState<'loading' | 'ready'>('loading');
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
   const timerRef = useRef<number | null>(null);
@@ -36,23 +20,29 @@ function EventsCarousel() {
   const count = events.length;
 
   useEffect(() => {
-    if (!isDriveConfigured()) return;
-    const controller = new AbortController();
-    fetchDriveEvents(controller.signal)
-      .then((items) => {
-        if (items.length > 0) setDriveCache(items);
-      })
-      .catch((err) => {
-        if ((err as { name?: string })?.name !== 'AbortError') {
-          console.warn('[EventsCarousel] Drive fetch failed, using fallback:', err);
-        }
-      });
-    return () => controller.abort();
-  }, []);
-
-  useEffect(() => {
     if (index >= count) setIndex(0);
   }, [count, index]);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    fetchCalendarEvents()
+      .then((items) => {
+        if (!isMounted) return;
+        setUpcomingEvents(items);
+        setCalendarStatus('ready');
+      })
+      .catch((error) => {
+        if (!isMounted) return;
+        console.error('Google Calendar fetch failed:', error);
+        setUpcomingEvents([]);
+        setCalendarStatus('ready');
+      });
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   const goTo = useCallback((next: number) => {
     setIndex(((next % count) + count) % count);
@@ -82,6 +72,33 @@ function EventsCarousel() {
         <div className="events-header">
           <h2 className="events-headline">{t('events.headline')}</h2>
         </div>
+
+        <div className="events-upcoming-stack">
+          {upcomingEvents.length > 0 ? (
+          <div className="events-upcoming-list" aria-live="polite">
+            {upcomingEvents.map((event) => (
+              <p key={event.id} className="events-upcoming-item">
+                {event.description}: {event.title}
+              </p>
+            ))}
+          </div>
+          ) : (
+            calendarStatus === 'ready' && (
+              <p className="events-upcoming-empty">{t('events.empty')}</p>
+            )
+          )}
+          <p className="events-discord-link">
+            {t('events.moreInfoDiscord')}{' '}
+            <a
+              className="events-discord-link-anchor"
+              href="https://discord.gg/FUF2tz5hc3"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Discord
+            </a>
+          </p>
+        </div>
         <div className="events-viewport">
           {events.map((event, i) => (
             <article
@@ -95,7 +112,7 @@ function EventsCarousel() {
                 <img src={event.image} alt={event.title} loading="lazy" referrerPolicy="no-referrer" />
               </div>
               <div className="events-caption">
-                <h3 className="events-title">{event.title}</h3>
+                <h3 className="events-title">{t('events.pastEvent', { title: event.title })}</h3>
                 {event.description && <p className="events-description">{event.description}</p>}
               </div>
             </article>

@@ -90,7 +90,10 @@
   },
   "events": {
     "label": "OUR EVENTS",
-    "headline": "Events",
+    "headline": "Upcoming Events",
+    "moreInfoDiscord": "More information on",
+    "empty": "New events to be announced soon!",
+    "pastEvent": "Past Event: {{title}}",
     "prev": "Previous event",
     "next": "Next event",
     "goTo": "Go to event",

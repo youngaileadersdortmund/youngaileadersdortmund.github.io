@@ -1,5 +1,3 @@
-import type { TFunction } from 'i18next';
-
 export interface EventItem {
   id: string;
   image: string;
@@ -7,39 +5,25 @@ export interface EventItem {
   description: string;
 }
 
-interface FallbackSpec {
-  id: string;
-  image: string;
-  titleKey: string;
-  descriptionKey: string;
+const eventImageModules = import.meta.glob('/public/events/*.{jpg,jpeg,png}', {
+  eager: true,
+  import: 'default',
+}) as Record<string, string>;
+
+function stripExtension(fileName: string): string {
+  return fileName.replace(/\.[^.]+$/, '').replace('at', '@');
 }
 
-const fallbackSpecs: FallbackSpec[] = [
-  {
-    id: 'fallback-community',
-    image: '/community1_lq.jpg',
-    titleKey: 'events.items.community.title',
-    descriptionKey: 'events.items.community.description',
-  },
-  {
-    id: 'fallback-applications',
-    image: '/call_for_applications.png',
-    titleKey: 'events.items.applications.title',
-    descriptionKey: 'events.items.applications.description',
-  },
-  {
-    id: 'fallback-election',
-    image: '/tu_dortmunder.jpg',
-    titleKey: 'events.items.election.title',
-    descriptionKey: 'events.items.election.description',
-  },
-];
+export function getFallbackEvents(): EventItem[] {
+  return Object.entries(eventImageModules).map(([path, image]) => {
+    const fileName = path.split('/').pop() ?? 'event';
+    const title = stripExtension(fileName);
 
-export function getFallbackEvents(t: TFunction): EventItem[] {
-  return fallbackSpecs.map((spec) => ({
-    id: spec.id,
-    image: spec.image,
-    title: t(spec.titleKey),
-    description: t(spec.descriptionKey),
-  }));
+    return {
+      id: `event-${fileName}`,
+      image,
+      title,
+      description: '',
+    };
+  });
 }
