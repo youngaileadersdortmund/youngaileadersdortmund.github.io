@@ -1,44 +1,22 @@
 import { useMemo, useRef, useState, type ChangeEvent, type FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
+import {
+  ACCEPTED_CV_TYPES,
+  MAX_JOIN_WORDS,
+  countWords,
+  hasValidationErrors,
+  resolveJoinFormEndpoint,
+  submitJoinApplication,
+  validateJoinApplication,
+  validateJoinEmailField,
+  type JoinApplicationErrors,
+  type JoinApplicationStatus,
+  type JoinApplicationValues,
+  type JoinValidationMessages,
+} from '../../lib/joinApplication';
 import '../../App.css';
 
-const MAX_WORDS = 250;
-const MAX_CV_BYTES = 5 * 1024 * 1024;
-const ALLOWED_CV_TYPES = [
-  'application/pdf',
-  'application/msword',
-  'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-];
-const ALLOWED_CV_EXT = /\.(pdf|docx?|DOCX?|PDF)$/;
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-const FORM_ENDPOINT = (import.meta.env.VITE_FORM_ENDPOINT ||
-  (import.meta.env.DEV ? '/api/join' : undefined)) as string | undefined;
-
-function countWords(text: string): number {
-  const trimmed = text.trim();
-  if (!trimmed) return 0;
-  return trimmed.split(/\s+/).length;
-}
-
-function ageInYears(dob: string): number | null {
-  // Parse YYYY-MM-DD as a local calendar date — `new Date('YYYY-MM-DD')` would
-  // be UTC midnight, which shifts the day in non-UTC timezones and produces
-  // off-by-one ages near the birthday.
-  const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(dob);
-  if (!match) return null;
-  const [, y, m, d] = match;
-  const birth = new Date(Number(y), Number(m) - 1, Number(d));
-  if (Number.isNaN(birth.getTime())) return null;
-  const now = new Date();
-  let age = now.getFullYear() - birth.getFullYear();
-  const monthDiff = now.getMonth() - birth.getMonth();
-  if (monthDiff < 0 || (monthDiff === 0 && now.getDate() < birth.getDate())) age -= 1;
-  return age;
-}
-
-type Errors = Partial<Record<'name' | 'email' | 'dob' | 'description' | 'cv', string>>;
-type Status = 'idle' | 'submitting' | 'success' | 'error';
+const FORM_ENDPOINT = resolveJoinFormEndpoint(import.meta.env);
 
 function JoinSection() {
   const { t } = useTranslation();
@@ -49,57 +27,42 @@ function JoinSection() {
   const [description, setDescription] = useState('');
   const [cv, setCv] = useState<File | null>(null);
   const [honeypot, setHoneypot] = useState('');
-  const [errors, setErrors] = useState<Errors>({});
-  const [status, setStatus] = useState<Status>('idle');
+  const [errors, setErrors] = useState<JoinApplicationErrors>({});
+  const [status, setStatus] = useState<JoinApplicationStatus>('idle');
   const fileInputRef = useRef<HTMLInputElement | null>(null);
 
   const wordCount = useMemo(() => countWords(description), [description]);
-  const wordOver = wordCount > MAX_WORDS;
+  const wordOver = wordCount > MAX_JOIN_WORDS;
+  const validationMessages = useMemo<JoinValidationMessages>(() => ({
+    nameRequired: t('join.errors.nameRequired'),
+    emailRequired: t('join.errors.emailRequired'),
+    emailInvalid: t('join.errors.emailInvalid'),
+    dobRequired: t('join.errors.dobRequired'),
+    dobAge: t('join.errors.dobAge'),
+    descriptionRequired: t('join.errors.descriptionRequired'),
+    descriptionTooLong: t('join.errors.descriptionTooLong'),
+    cvRequired: t('join.errors.cvRequired'),
+    cvType: t('join.errors.cvType'),
+    cvSize: t('join.errors.cvSize'),
+  }), [t]);
 
-  function validate(): Errors {
-    const next: Errors = {};
-    if (!name.trim()) next.name = t('join.errors.nameRequired');
-
-    const trimmedEmail = email.trim();
-    if (!trimmedEmail) next.email = t('join.errors.emailRequired');
-    else if (!EMAIL_RE.test(trimmedEmail)) next.email = t('join.errors.emailInvalid');
-
-    if (!dob) next.dob = t('join.errors.dobRequired');
-    else {
-      const age = ageInYears(dob);
-      if (age === null || age < 18 || age > 30) next.dob = t('join.errors.dobAge');
-    }
-
-    if (!description.trim()) next.description = t('join.errors.descriptionRequired');
-    else if (wordOver) next.description = t('join.errors.descriptionTooLong');
-
-    if (!cv) next.cv = t('join.errors.cvRequired');
-    else {
-      const okType = ALLOWED_CV_TYPES.includes(cv.type) || ALLOWED_CV_EXT.test(cv.name);
-      if (!okType) next.cv = t('join.errors.cvType');
-      else if (cv.size > MAX_CV_BYTES) next.cv = t('join.errors.cvSize');
-    }
-
-    return next;
-  }
-
-  function validateEmailField(value: string): string | undefined {
-    const v = value.trim();
-    if (!v) return t('join.errors.emailRequired');
-    if (!EMAIL_RE.test(v)) return t('join.errors.emailInvalid');
-    return undefined;
+  function getValues(): JoinApplicationValues {
+    return { name, email, dob, description, cv };
   }
 
   function handleEmailChange(e: ChangeEvent<HTMLInputElement>) {
     const v = e.target.value;
     setEmail(v);
-    if (errors.email && !validateEmailField(v)) {
+    if (errors.email && !validateJoinEmailField(v, validationMessages)) {
       setErrors((prev) => ({ ...prev, email: undefined }));
     }
   }
 
   function handleEmailBlur() {
-    setErrors((prev) => ({ ...prev, email: validateEmailField(email) }));
+    setErrors((prev) => ({
+      ...prev,
+      email: validateJoinEmailField(email, validationMessages),
+    }));
   }
 
   function handleFile(e: ChangeEvent<HTMLInputElement>) {
@@ -121,41 +84,19 @@ function JoinSection() {
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (honeypot) return; // bot — silently drop
-    const next = validate();
+
+    const values = getValues();
+    const next = validateJoinApplication(values, validationMessages);
     setErrors(next);
-    if (Object.values(next).some(Boolean)) return;
+    if (hasValidationErrors(next)) return;
 
     setStatus('submitting');
     try {
       if (!FORM_ENDPOINT) {
-        // In production we refuse to fake success — silent data loss would be
-        // catastrophic if the env var is forgotten on deploy. In dev we still
-        // log + fake success so the UX is testable without the worker.
-        if (import.meta.env.PROD) {
-          console.error('[JoinSection] VITE_FORM_ENDPOINT not configured in production build.');
-          setStatus('error');
-          return;
-        }
-        console.warn('[JoinSection] VITE_FORM_ENDPOINT not configured — logging payload only.');
-        console.log({ name, email, dob, description, cv });
-        await new Promise((r) => setTimeout(r, 600));
-        setStatus('success');
-        resetForm();
-        return;
+        throw new Error('VITE_FORM_ENDPOINT is not configured.');
       }
 
-      const fd = new FormData();
-      fd.append('name', name);
-      fd.append('email', email);
-      fd.append('dob', dob);
-      fd.append('description', description);
-      if (cv) fd.append('cv', cv, cv.name);
-
-      const res = await fetch(FORM_ENDPOINT, { method: 'POST', body: fd });
-      if (!res.ok) {
-        const text = await res.text().catch(() => '');
-        throw new Error(`Submit failed (${res.status}): ${text}`);
-      }
+      await submitJoinApplication(FORM_ENDPOINT, values);
       setStatus('success');
       resetForm();
     } catch (err) {
@@ -275,7 +216,7 @@ function JoinSection() {
                   id="join-cv"
                   ref={fileInputRef}
                   type="file"
-                  accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+                  accept={ACCEPTED_CV_TYPES}
                   onChange={handleFile}
                   aria-invalid={Boolean(errors.cv)}
                   aria-describedby={errors.cv ? 'join-cv-error' : 'join-cv-hint'}
