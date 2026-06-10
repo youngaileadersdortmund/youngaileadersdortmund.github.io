@@ -20,10 +20,6 @@ function EventsCarousel() {
   const count = events.length;
 
   useEffect(() => {
-    if (index >= count) setIndex(0);
-  }, [count, index]);
-
-  useEffect(() => {
     let isMounted = true;
 
     fetchCalendarEvents()

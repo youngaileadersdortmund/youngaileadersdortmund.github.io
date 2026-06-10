@@ -12,7 +12,8 @@ const ALLOWED_CV_TYPES = [
 const ALLOWED_CV_EXT = /\.(pdf|docx?|DOCX?|PDF)$/;
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const FORM_ENDPOINT = import.meta.env.VITE_FORM_ENDPOINT as string | undefined;
+const FORM_ENDPOINT = (import.meta.env.VITE_FORM_ENDPOINT ||
+  (import.meta.env.DEV ? '/api/join' : undefined)) as string | undefined;
 
 function countWords(text: string): number {
   const trimmed = text.trim();

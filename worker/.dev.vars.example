@@ -1,0 +1,4 @@
+RESEND_EMAIL=youssefezzatw@gmail.com
+RESEND_API_KEY=re_your_api_key_here
+FROM_EMAIL=onboarding@resend.dev
+ALLOWED_ORIGINS=http://localhost:5173

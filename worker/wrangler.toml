@@ -6,5 +6,5 @@ compatibility_date = "2025-01-01"
 #   wrangler secret put RESEND_API_KEY
 [vars]
 FROM_EMAIL = "onboarding@resend.dev"
-TO_EMAIL = "dortmundhub.youngaileaders@gmail.com"
+RESEND_EMAIL = "dortmundhub.youngaileaders@gmail.com"
 ALLOWED_ORIGINS = "https://youngaileaders-dortmund.de,http://localhost:5173"
