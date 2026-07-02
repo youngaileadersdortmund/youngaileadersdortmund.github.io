@@ -641,28 +641,13 @@ h3 {
   box-shadow: var(--shadow-small);
 }
 
-.member-photo-wrap {
-  position: relative;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  background: var(--surface-teal);
-}
-
-.member-photo-wrap::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 7px;
-  background: linear-gradient(90deg, var(--brand-teal), var(--brand-yellow), var(--brand-orange), var(--brand-magenta));
-}
-
 .member-photo {
   width: 100%;
   height: 100%;
   display: block;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
+  background: var(--surface-teal);
 }
 
 .member-card-body {
