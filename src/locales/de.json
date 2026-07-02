@@ -61,5 +61,12 @@
     "emailLabel": "E-Mail:",
     "phoneLabel": "Telefon:",
     "editorial": "Verantwortlich für den Inhalt gemäß § 18 MStV (Medienstaatsvertrag)"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "hosting": "Unsere Website wird über <a href=\"https://pages.github.com/\" target=\"_blank\" rel=\"noreferrer\">GitHub Pages</a> gehostet (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). Beim Aufruf unserer Seiten sammelt GitHub automatisch Protokolldaten (z. B. IP-Adresse, Browsertyp, Zugriffszeit), um die Sicherheit und Funktionalität des Dienstes zu gewährleisten. Wir haben keinen Zugriff auf diese Daten und verarbeiten sie nicht selbst.",
+    "analytics": "Wir verwenden Google Analytics, um die Nutzung der Website zu beobachten und unsere Website zu verbessern. Weitere Informationen dazu, wie Google Analytics Daten sammelt und verarbeitet, finden Sie auf den <a href=\"https://policies.google.com/technologies/partner-sites\" target=\"_blank\" rel=\"noreferrer\">Seiten zum Google Datenschutz & Nutzungsbedingungen</a>. Ein Cookie wird verwendet, um Ihre Einwilligungseinstellungen aus dem Cookie-Banner zu speichern.",
+    "links": "Unsere Website enthält außerdem Links zu externen Drittanbieter-Websites (z. B. AI for Good, Discord, LinkedIn). Wenn Sie auf diese Links klicken, verlassen Sie unsere Website. Die Betreiber dieser verlinkten Seiten sind allein verantwortlich für deren Inhalte und die Verarbeitung personenbezogener Daten.",
+    "summary": "Darüber hinaus verwenden wir keine Cookies, Tracking- oder Analyse-Tools und es werden keine weiteren personenbezogenen Daten verarbeitet."
   }
 }
