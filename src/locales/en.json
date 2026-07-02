@@ -72,7 +72,7 @@
   "members": {
     "label": "MEMBERS",
     "headline": "Meet the Young AI Leaders.",
-    "linkedinLabel": "Open {{name}} on LinkedIn"
+    "webLabel": "More information (AI for Good Profile of {{name}})"
   },
   "about": {
     "label": "ABOUT",

@@ -1,3 +1,4 @@
+import { useEffect, useState, type KeyboardEvent as ReactKeyboardEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 import '../../App.css';
 
@@ -114,6 +115,33 @@ function getMemberPosition(image: string) {
 
 function MembersSection() {
   const { t } = useTranslation();
+  const [selectedMember, setSelectedMember] = useState<(typeof members)[number] | null>(null);
+
+  useEffect(() => {
+    if (!selectedMember) {
+      return;
+    }
+
+    const handleKeyDown = (event: globalThis.KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setSelectedMember(null);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [selectedMember]);
+
+  const openMember = (member: (typeof members)[number]) => {
+    setSelectedMember(member);
+  };
+
+  const handleCardKeyDown = (event: ReactKeyboardEvent<HTMLElement>, member: (typeof members)[number]) => {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      openMember(member);
+    }
+  };
 
   return (
     <section id="members" className="members-section">
@@ -123,7 +151,14 @@ function MembersSection() {
 
         <div className="members-grid">
           {members.map((member) => (
-            <article className="member-card" key={member.name}>
+            <article
+              className="member-card"
+              key={member.name}
+              role="button"
+              tabIndex={0}
+              onClick={() => openMember(member)}
+              onKeyDown={(event) => handleCardKeyDown(event, member)}
+            >
               <div className="member-photo-wrap">
                 <img src={member.image} alt={member.name} className="member-photo" loading="lazy" />
               </div>
@@ -137,7 +172,8 @@ function MembersSection() {
                   href={member.url}
                   target="_blank"
                   rel="noreferrer"
-                  aria-label={t('members.linkedinLabel', { name: member.name })}
+                  aria-label={t('members.webLabel', { name: member.name })}
+                  onClick={(event) => event.stopPropagation()}
                 >
                   <WebIcon />
                 </a>
@@ -146,6 +182,28 @@ function MembersSection() {
           ))}
         </div>
       </div>
+
+      {selectedMember && (
+        <div className="member-image-modal" role="dialog" aria-modal="true" aria-label={`Preview of ${selectedMember.name}`} onClick={() => setSelectedMember(null)}>
+          <div className="member-image-modal__content" onClick={(event) => event.stopPropagation()}>
+            <button
+              className="member-image-modal__close"
+              type="button"
+              aria-label={`Close preview of ${selectedMember.name}`}
+              onClick={() => setSelectedMember(null)}
+            >
+              ×
+            </button>
+            <img src={selectedMember.image} alt={selectedMember.name} className="member-image-modal__image" />
+            <div className="member-image-modal__caption">
+              <h3>{getMemberPosition(selectedMember.image) + ": " + selectedMember.name}</h3>
+              <a href={selectedMember.url} target="_blank" rel="noreferrer">
+                {t('members.webLabel', { name: selectedMember.name })}
+              </a>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

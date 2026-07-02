@@ -72,7 +72,7 @@
   "members": {
     "label": "MITGLIEDER",
     "headline": "Wir sind die Young AI Leaders!",
-    "linkedinLabel": "{{name}} auf LinkedIn öffnen"
+    "webLabel": "Mehr Informationen (AI for Good Profil von {{name}})"
   },
   "about": {
     "label": "ÜBER UNS",
