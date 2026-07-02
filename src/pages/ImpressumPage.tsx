@@ -1,38 +1,44 @@
+import { useTranslation } from 'react-i18next';
+import '../App.css';
+
 function ImpressumPage() {
+  const { t } = useTranslation();
+
   return (
     <main className="legal-page">
       <div className="legal-container">
-        <h1 className="legal-title">Legal Notice</h1>
+        <h1 className="legal-title">{t('legal.title')}</h1>
 
-        <p className="legal-lede">According to § 5 TMG (German Telemedia Act):</p>
+        <p className="legal-lede">{t('legal.lede')}</p>
 
         <p>
-          <strong>Young AI Leaders – Dortmund Hub</strong>
+          <strong>{t('legal.hubName')}</strong>
           <br />
-          As part of the global Young AI Leaders community
+          {t('legal.communityIntro')}{' '}
+          <a href="https://aiforgood.itu.int/young-ai-leaders-community/" target="_blank" rel="noreferrer">
+            {t('legal.communityLink')}
+          </a>
         </p>
 
-        <h2 className="legal-subtitle">Represented by</h2>
+        <h2 className="legal-subtitle">{t('legal.representedBy')}</h2>
         <p>
           Raphael Fischer
           <br />
-          Lamarr Institute for Machine Learning and Artificial Intelligence
+          {t('legal.institute')}
           <br />
-          Joseph-von-Fraunhofer-Straße 25
+          {t('legal.addressLine1')}
           <br />
-          44227 Dortmund, Germany
+          {t('legal.addressLine2')}
         </p>
 
-        <h2 className="legal-subtitle">Kontakt</h2>
+        <h2 className="legal-subtitle">{t('legal.contact')}</h2>
         <p>
-          E-Mail: dortmundhub.youngaileaders [at] gmail.com
+          {t('legal.emailLabel')} dortmundhub.youngaileaders [at] gmail.com
           <br />
-          Phone: +49 231 755 5148
+          {t('legal.phoneLabel')} +49 231 755 5148
         </p>
 
-        <h2 className="legal-subtitle">
-          Editorially responsible according to § 18 MStV (German Interstate Media Treaty)
-        </h2>
+        <h2 className="legal-subtitle">{t('legal.editorial')}</h2>
         <p>Raphael Fischer</p>
       </div>
     </main>
