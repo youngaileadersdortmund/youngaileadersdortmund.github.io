@@ -45,7 +45,10 @@
     "label": "ÜBER UNS",
     "headline": "Junge Talente.",
     "headlineColored": "Echte Wirkung.",
-    "description": "Gegründet im Jahr 2025 sind die <strong>Young AI Leaders Dortmund</strong> Teil der <a href=\"https://aiforgood.itu.int/young-ai-leaders-community/\" target=\"_blank\" rel=\"noreferrer\">globalen AI for Good Initiative</a>. Wir bringen eine vielfältige Community aus Studierenden, Forschenden und Fachkräften zusammen, um gemeinsam an verantwortungsvollen KI-Projekten zu arbeiten, die die Nachhaltigkeitsziele der Vereinten Nationen unterstützen. Durch starke Verbindungen zu lokalen Partnern wie dem <a href=\"https://lamarr-institute.org/\" target=\"_blank\" rel=\"noreferrer\">Lamarr-Institut</a> und <a href=\"https://rc-trust.ai/\" target=\"_blank\" rel=\"noreferrer\">RC-Trust</a> verbindet unser Hub technisches Know-how mit offener, inklusiver Zusammenarbeit. Gemeinsam entwickeln wir innovative Projekte mit realer Wirkung in Dortmund, der gesamten NRW-Region und darüber hinaus."
+    "description": "Gegründet im Jahr 2025 sind die <strong>Young AI Leaders Dortmund</strong> Teil der <a href=\"https://aiforgood.itu.int/young-ai-leaders-community/\" target=\"_blank\" rel=\"noreferrer\">globalen AI for Good Initiative</a>. Wir bringen eine vielfältige Community aus Studierenden, Forschenden und Fachkräften zusammen, um gemeinsam an verantwortungsvollen KI-Projekten zu arbeiten, die die Nachhaltigkeitsziele der Vereinten Nationen unterstützen. Durch starke Verbindungen zu lokalen Partnern wie dem <a href=\"https://lamarr-institute.org/\" target=\"_blank\" rel=\"noreferrer\">Lamarr-Institut</a> und <a href=\"https://rc-trust.ai/\" target=\"_blank\" rel=\"noreferrer\">RC-Trust</a> verbindet unser Hub technisches Know-how mit offener, inklusiver Zusammenarbeit. Gemeinsam entwickeln wir innovative Projekte mit realer Wirkung in Dortmund, der gesamten NRW-Region und darüber hinaus.",
+    "socialBox": {
+      "title": "Vernetze dich mit unserem Hub!"
+    }
   },
   "legal": {
     "title": "Impressum",

@@ -45,7 +45,10 @@
     "label": "ABOUT",
     "headline": "Young Talents.",
     "headlineColored": "Real Impact.",
-    "description": "Founded in 2025, the  <strong>Young AI Leaders Dortmund</strong> are part of the <a href=\"https://aiforgood.itu.int/young-ai-leaders-community/\" target=\"_blank\" rel=\"noreferrer\">global AI for Good initiative</a>. We bring together a diverse community of students, researchers, and professionals to collaborate on responsible AI projects that support the UN Sustainable Development Goals. Supported by strong connections to local partners like the  <a href=\"https://lamarr-institute.org/\" target=\"_blank\" rel=\"noreferrer\">Lamarr Institute</a> and <a href=\"https://rc-trust.ai/\" target=\"_blank\" rel=\"noreferrer\">RC-Trust</a>, our hub combines technical expertise with open, inclusive collaboration. Together, we create innovative projects with real-world impact in Dortmund, the wider NRW region, and beyond."
+    "description": "Founded in 2025, the  <strong>Young AI Leaders Dortmund</strong> are part of the <a href=\"https://aiforgood.itu.int/young-ai-leaders-community/\" target=\"_blank\" rel=\"noreferrer\">global AI for Good initiative</a>. We bring together a diverse community of students, researchers, and professionals to collaborate on responsible AI projects that support the UN Sustainable Development Goals. Supported by strong connections to local partners like the  <a href=\"https://lamarr-institute.org/\" target=\"_blank\" rel=\"noreferrer\">Lamarr Institute</a> and <a href=\"https://rc-trust.ai/\" target=\"_blank\" rel=\"noreferrer\">RC-Trust</a>, our hub combines technical expertise with open, inclusive collaboration. Together, we create innovative projects with real-world impact in Dortmund, the wider NRW region, and beyond.",
+    "socialBox": {
+      "title": "Connect with our Hub!"
+    }
   },
   "legal": {
     "title": "Legal Notice",
