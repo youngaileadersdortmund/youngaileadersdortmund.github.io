@@ -11,7 +11,7 @@
   },
   "hero": {
     "headline": "Glaubst du, dass KI für Gutes eingesetzt werden kann - hier, in Dortmund?",
-    "subheadline": "Werde Teil der führenden Jugendgemeinschaft für künstliche Intelligenz (KI) im Ruhrgebiet, welche diese neue Technologie verantwortungsbewusst für nachhaltige Zwecke entwickelt und einsetzt.",
+    "subheadline": "Werde Teil der führenden Jugendgemeinschaft für den verantwortungsbewussten und nachhaltigen Einsatz von künstlicher Intelligenz im Ruhrgebiet.",
     "title": "Young AI Leaders - Dortmund Hub"
   },
   "footer": {
@@ -22,42 +22,9 @@
   "join": {
     "label": "DEM HUB BEITRETEN",
     "headline": "Werde Teil der Young AI Leaders.",
-    "intro": "Menschen aus allen Hintergründen sind ausdrücklich willkommen — <strong>Diversität ist eine zentrale Stärke</strong> unserer Community. Alle <strong>zwischen 18 und 30 Jahren</strong> können sich bewerben, um bis zu <strong>vier Jahre</strong> lang Young AI Leader zu werden. Fülle einfach das Formular unten aus und wir melden uns bei dir.",
-    "fields": {
-      "name": "Vollständiger Name",
-      "email": "E-Mail",
-      "dob": "Geburtsdatum",
-      "description": "Erzähl uns etwas über dich",
-      "cv": "Lebenslauf"
-    },
-    "placeholders": {
-      "name": "Max Mustermann",
-      "email": "max@example.com",
-      "description": "Was begeistert dich an KI? Was möchtest du hier bauen, lernen oder beitragen? (max. 250 Wörter)"
-    },
-    "helpers": {
-      "wordCount": "{{count}} / 250 Wörter",
-      "cvHint": "PDF, DOC oder DOCX • max. 5 MB",
-      "cvNone": "Keine Datei ausgewählt",
-      "cvChoose": "Datei auswählen",
-      "cvReplace": "Datei ersetzen"
-    },
-    "errors": {
-      "nameRequired": "Bitte gib deinen Namen ein.",
-      "emailRequired": "Bitte gib deine E-Mail-Adresse ein.",
-      "emailInvalid": "Das sieht nicht wie eine gültige E-Mail-Adresse aus.",
-      "dobRequired": "Bitte gib dein Geburtsdatum ein.",
-      "dobAge": "Du musst zwischen 18 und 30 Jahre alt sein, um dich zu bewerben.",
-      "descriptionRequired": "Bitte erzähle uns etwas über dich.",
-      "descriptionTooLong": "Bitte bleibe unter 250 Wörtern.",
-      "cvRequired": "Bitte füge deinen Lebenslauf hinzu.",
-      "cvType": "Es werden nur PDF-, DOC- oder DOCX-Dateien akzeptiert.",
-      "cvSize": "Die Datei ist zu groß — bitte unter 5 MB bleiben."
-    },
-    "submit": "Bewerbung abschicken",
-    "submitting": "Wird gesendet…",
-    "success": "Danke — deine Bewerbung ist eingegangen. Wir melden uns bald bei dir.",
-    "failure": "Beim Senden deiner Bewerbung ist etwas schiefgelaufen. Bitte versuche es erneut oder schreibe uns direkt eine E-Mail."
+    "intro": "Du kannst auch ohne Mitgliedschaft auf unseren <a href=\"https://discord.gg/FUF2tz5hc3\" target=\"_blank\">Discord</a> kommen und an unseren <a href=\"/events\">Events</a> teilnehmen. Man braucht keinen technischen Hintergrund — KI ist interdisziplinär und <strong>Diversität ist eine zentrale Stärke</strong> unserer Community.",
+    "details": "Alle <strong>zwischen 18 und 30 Jahren</strong> können sich bewerben, um bis zu <strong>vier Jahre</strong> offiziell Mitglied der Young AI Leaders zu werden. Weitere Informationen zur Mitgliedschaft findet man in der <a href=\"https://aiforgood.itu.int/young-ai-leaders-community/community-charter/\" target=\"_blank\" >globalen Community Charter</a>, welche verpflichtend für alle Mitglieder gilt.",
+    "call": "Du bist interessiert? Dann schicke uns einfach deine <strong>Bewerbung per E-Mail</strong>! Sie sollte deinen <strong>Namen</strong>, dein <strong>Geburtstsdatum</strong>, einen persönlichen Text zu deiner <strong>Motivation</strong> (insgesamt max. 250 Wörter) und einen <strong>Lebenslauf</strong> (als PDF im Anhang) enthalten."
   },
   "events": {
     "label": "UNSERE EVENTS",

@@ -882,6 +882,13 @@ h3 {
   box-shadow: var(--shadow-soft);
 }
 
+.join-container--static {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
 .join-headline {
   margin-bottom: 20px;
 }
@@ -891,6 +898,25 @@ h3 {
   color: var(--ink-muted);
   font-size: 1.05rem;
   line-height: 1.72;
+}
+
+.join-email {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: var(--surface-teal);
+  color: var(--brand-magenta);
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.join-email:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
 }
 
 .join-form {

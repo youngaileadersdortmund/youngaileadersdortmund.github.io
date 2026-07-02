@@ -22,42 +22,9 @@
   "join": {
     "label": "JOIN THE HUB",
     "headline": "Join the Young AI Leaders.",
-    "intro": "We explicitly welcome folks from any background — <strong>diversity is a central strength</strong> of our community. Anyone <strong>aged 18–30</strong> can apply to become a Young AI Leader for up to <strong>four years</strong>. Fill out the form below and we'll get back to you.",
-    "fields": {
-      "name": "Full name",
-      "email": "Email",
-      "dob": "Date of birth",
-      "description": "Tell us about yourself",
-      "cv": "CV / Resume"
-    },
-    "placeholders": {
-      "name": "Jane Doe",
-      "email": "jane@example.com",
-      "description": "What draws you to AI? What would you like to build, learn, or contribute here? (max 250 words)"
-    },
-    "helpers": {
-      "wordCount": "{{count}} / 250 words",
-      "cvHint": "PDF, DOC or DOCX • max 5 MB",
-      "cvNone": "No file chosen",
-      "cvChoose": "Choose file",
-      "cvReplace": "Replace file"
-    },
-    "errors": {
-      "nameRequired": "Please enter your name.",
-      "emailRequired": "Please enter your email.",
-      "emailInvalid": "That doesn't look like a valid email.",
-      "dobRequired": "Please enter your date of birth.",
-      "dobAge": "You must be between 18 and 30 to apply.",
-      "descriptionRequired": "Please tell us a little about yourself.",
-      "descriptionTooLong": "Please keep it under 250 words.",
-      "cvRequired": "Please attach your CV.",
-      "cvType": "Only PDF, DOC, or DOCX files are accepted.",
-      "cvSize": "File is too large — keep it under 5 MB."
-    },
-    "submit": "Submit application",
-    "submitting": "Submitting…",
-    "success": "Thanks — your application is in. We'll be in touch soon.",
-    "failure": "Something went wrong sending your application. Please try again or email us directly."
+    "intro": "You can join our <a href=\"https://discord.gg/FUF2tz5hc3\" target=\"_blank\">Discord</a> and participate in our <a href=\"/events\">events</a> without a membership. You don't need a technical background — AI is interdisciplinary, and <strong>diversity is a key strength</strong> of our community.",
+    "details": "Anyone <strong>between the ages of 18 and 30</strong> can apply to become an official member of Young AI Leaders for up to <strong>four years</strong>. Further information on membership can be found in the <a href=\"https://aiforgood.itu.int/young-ai-leaders-community/community-charter/\" target=\"_blank\" >global Community Charter</a>, which is binding for all members.",
+    "call": "Interested? Then simply send us your <strong>application via email</strong>! It should include your <strong>name</strong>, <strong>date of birth</strong>, a personal statement explaining your <strong>motivation</strong> (maximum 250 words total), and a <strong>resume / CV</strong> (as a PDF attachment)."
   },
   "events": {
     "label": "OUR EVENTS",
@@ -76,8 +43,8 @@
   },
   "about": {
     "label": "ABOUT",
-    "headline": "Young talents.",
-    "headlineColored": "real impact.",
+    "headline": "Young Talents.",
+    "headlineColored": "Real Impact.",
     "description": "Founded in 2025, the  <strong>Young AI Leaders Dortmund</strong> are part of the <a href=\"https://aiforgood.itu.int/young-ai-leaders-community/\" target=\"_blank\" rel=\"noreferrer\">global AI for Good initiative</a>. We bring together a diverse community of students, researchers, and professionals to collaborate on responsible AI projects that support the UN Sustainable Development Goals. Supported by strong connections to local partners like the  <a href=\"https://lamarr-institute.org/\" target=\"_blank\" rel=\"noreferrer\">Lamarr Institute</a> and <a href=\"https://rc-trust.ai/\" target=\"_blank\" rel=\"noreferrer\">RC-Trust</a>, our hub combines technical expertise with open, inclusive collaboration. Together, we create innovative projects with real-world impact in Dortmund, the wider NRW region, and beyond."
   }
 }
