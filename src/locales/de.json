@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "about": "Über uns",
+    "events": "Veranstaltungen",
+    "members": "Mitglieder",
+    "contact": "Kontakt",
+    "join": "Dem Hub beitreten",
+    "brand": "Young AI Leaders",
+    "english": "Englisch",
+    "deutsch": "Deutsch"
+  },
+  "hero": {
+    "headline": "Glaubst du, dass KI für Gutes eingesetzt werden kann - hier, in Dortmund?",
+    "subheadline": "Werde Teil der führenden Jugendgemeinschaft für den verantwortungsbewussten und nachhaltigen Einsatz von künstlicher Intelligenz im Ruhrgebiet.",
+    "title": "Young AI Leaders - Dortmund Hub"
+  },
+  "footer": {
+    "impressum": "Impressum",
+    "datenschutz": "Datenschutzerklärung",
+    "legalNav": "Rechtliches"
+  },
+  "join": {
+    "label": "DEM HUB BEITRETEN",
+    "headline": "Werde Teil der Young AI Leaders.",
+    "intro": "Du kannst auch ohne Mitgliedschaft auf unseren <a href=\"https://discord.gg/FUF2tz5hc3\" target=\"_blank\">Discord</a> kommen und an unseren <a href=\"/events\">Events</a> teilnehmen. Man braucht keinen technischen Hintergrund — KI ist interdisziplinär und <strong>Diversität ist eine zentrale Stärke</strong> unserer Community.",
+    "details": "Alle <strong>zwischen 18 und 30 Jahren</strong> können sich bewerben, um bis zu <strong>vier Jahre</strong> offiziell Mitglied der Young AI Leaders zu werden. Weitere Informationen zur Mitgliedschaft findet man in der <a href=\"https://aiforgood.itu.int/young-ai-leaders-community/community-charter/\" target=\"_blank\" >globalen Community Charter</a>, welche verpflichtend für alle Mitglieder gilt.",
+    "call": "Du bist interessiert? Dann schicke uns einfach deine <strong>Bewerbung per E-Mail</strong>! Sie sollte deinen <strong>Namen</strong>, dein <strong>Geburtstsdatum</strong>, einen persönlichen Text zu deiner <strong>Motivation</strong> (insgesamt max. 250 Wörter) und einen <strong>Lebenslauf</strong> (als PDF im Anhang) enthalten."
+  },
+  "events": {
+    "label": "UNSERE EVENTS",
+    "headline": "Kommende Veranstaltungen",
+    "moreInfoDiscord": "Mehr Informationen auf",
+    "empty": "Neue Veranstaltungen werden bald angekündigt!",
+    "pastEvent": "Vergangene Veranstaltung: {{title}}",
+    "prev": "Vorherige Veranstaltung",
+    "next": "Nächste Veranstaltung",
+    "goTo": "Zur Veranstaltung"
+  },
+  "members": {
+    "label": "MITGLIEDER",
+    "headline": "Wir sind die Young AI Leaders!",
+    "webLabel": "Mehr Informationen (AI for Good Profil von {{name}})"
+  },
+  "about": {
+    "label": "ÜBER UNS",
+    "headline": "Junge Talente.",
+    "headlineColored": "Echte Wirkung.",
+    "description": "Gegründet im Jahr 2025 sind die <strong>Young AI Leaders Dortmund</strong> Teil der <a href=\"https://aiforgood.itu.int/young-ai-leaders-community/\" target=\"_blank\" rel=\"noreferrer\">globalen AI for Good Initiative</a>. Wir bringen eine vielfältige Community aus Studierenden, Forschenden und Fachkräften zusammen, um gemeinsam an verantwortungsvollen KI-Projekten zu arbeiten, die die Nachhaltigkeitsziele der Vereinten Nationen unterstützen. Durch starke Verbindungen zu lokalen Partnern wie dem <a href=\"https://lamarr-institute.org/\" target=\"_blank\" rel=\"noreferrer\">Lamarr-Institut</a> und <a href=\"https://rc-trust.ai/\" target=\"_blank\" rel=\"noreferrer\">RC-Trust</a> verbindet unser Hub technisches Know-how mit offener, inklusiver Zusammenarbeit. Gemeinsam entwickeln wir innovative Projekte mit realer Wirkung in Dortmund, der gesamten NRW-Region und darüber hinaus.",
+    "socialBox": {
+      "title": "Vernetze dich mit unserem Hub!"
+    }
+  },
+  "legal": {
+    "title": "Impressum",
+    "lede": "Gemäß § 5 TMG (Telemediengesetz):",
+    "hubName": "Young AI Leaders - Dortmund Hub",
+    "communityIntro": "Als Teil der globalen",
+    "communityLink": "Young AI Leaders Community",
+    "representedBy": "Vertreten durch",
+    "institute": "Lamarr-Institut für Machinelles Lernen und Künstliche Intelligenz",
+    "addressLine1": "Joseph-von-Fraunhofer-Straße 25",
+    "addressLine2": "44227 Dortmund, Deutschland",
+    "contact": "Kontakt",
+    "emailLabel": "E-Mail:",
+    "phoneLabel": "Telefon:",
+    "editorial": "Verantwortlich für den Inhalt gemäß § 18 MStV (Medienstaatsvertrag)"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "hosting": "Unsere Website wird über <a href=\"https://pages.github.com/\" target=\"_blank\" rel=\"noreferrer\">GitHub Pages</a> gehostet (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). Beim Aufruf unserer Seiten sammelt GitHub automatisch Protokolldaten (z. B. IP-Adresse, Browsertyp, Zugriffszeit), um die Sicherheit und Funktionalität des Dienstes zu gewährleisten. Wir haben keinen Zugriff auf diese Daten und verarbeiten sie nicht selbst.",
+    "analytics": "Wir verwenden Google Analytics, um die Nutzung der Website zu beobachten und unsere Website zu verbessern. Weitere Informationen dazu, wie Google Analytics Daten sammelt und verarbeitet, finden Sie auf den <a href=\"https://policies.google.com/technologies/partner-sites\" target=\"_blank\" rel=\"noreferrer\">Seiten zum Google Datenschutz & Nutzungsbedingungen</a>. Ein Cookie wird verwendet, um Ihre Einwilligungseinstellungen aus dem Cookie-Banner zu speichern.",
+    "links": "Unsere Website enthält außerdem Links zu externen Drittanbieter-Websites (z. B. AI for Good, Discord, LinkedIn). Wenn Sie auf diese Links klicken, verlassen Sie unsere Website. Die Betreiber dieser verlinkten Seiten sind allein verantwortlich für deren Inhalte und die Verarbeitung personenbezogener Daten.",
+    "summary": "Darüber hinaus verwenden wir keine Cookies, Tracking- oder Analyse-Tools und es werden keine weiteren personenbezogenen Daten verarbeitet."
+  }
+}
