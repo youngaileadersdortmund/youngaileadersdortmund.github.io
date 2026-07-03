@@ -6,91 +6,109 @@ const members = [
   {
     name: 'Raphael Fischer',
     image: new URL('../../../members/1.png', import.meta.url).href,
+    role: 'Hub Leader',
     url: 'https://aiforgood.itu.int/speaker/raphael-fischer/'
   },
   {
     name: 'Nico Koltermann',
     image: new URL('../../../members/2.png', import.meta.url).href,
+    role: 'Impact Lead',
     url: 'https://aiforgood.itu.int/speaker/nico-koltermann/'
   },
   {
     name: 'Bahavathy Kathirgamanathan',
     image: new URL('../../../members/3.png', import.meta.url).href,
+    role: 'Regional Lead',
     url: 'https://aiforgood.itu.int/speaker/bahavathy-kathirgamanathan/'
   },
   {
     name: 'Adrian Orego',
     image: new URL('../../../members/4.png', import.meta.url).href,
+    role: 'Member',
     url: 'https://aiforgood.itu.int/speaker/adrian-orego/'
   },
   {
     name: 'Louisa von Essen',
     image: new URL('../../../members/5.png', import.meta.url).href,
+    role: 'Member',
     url: 'https://aiforgood.itu.int/speaker/louisa-von-essen/'
   },
   {
     name: 'Lea Busse',
     image: new URL('../../../members/6.png', import.meta.url).href,
+    role: 'Member',
     url: 'https://aiforgood.itu.int/speaker/lea-busse/'
   },
   {
     name: 'Tareq Khouja',
     image: new URL('../../../members/7.png', import.meta.url).href,
+    role: 'Member',
     url: 'https://aiforgood.itu.int/speaker/tareq-khouja/'
   },
   {
     name: 'Celine Wald',
     image: new URL('../../../members/8.png', import.meta.url).href,
+    role: 'Member',
     url: 'https://aiforgood.itu.int/speaker/celine-wald/'
   },
   {
     name: 'Youssef Abdelrahim',
     image: new URL('../../../members/9.png', import.meta.url).href,
+    role: 'Member',
     url: 'https://aiforgood.itu.int/speaker/youssef-abdelrahim/'
   },
   {
     name: 'Philip Modayil',
     image: new URL('../../../members/10.png', import.meta.url).href,
+    role: 'Member',
     url: 'https://aiforgood.itu.int/speaker/philip-modayil/'
   },
   {
     name: 'Grigorii Iakovlev',
     image: new URL('../../../members/11.png', import.meta.url).href,
+    role: 'Member',
     url: 'https://aiforgood.itu.int/speaker/grigorii-iakovlev/'
   },
   {
     name: 'Hendrik Weißenfels',
     image: new URL('../../../members/12.png', import.meta.url).href,
+    role: 'Member',
     url: 'https://aiforgood.itu.int/speaker/hendrik-weisenfels/'
   },
   {
     name: 'Robin Stecher',
     image: new URL('../../../members/13.png', import.meta.url).href,
+    role: 'Member',
     url: 'https://aiforgood.itu.int/speaker/robin-stecher/'
   },
   {
     name: 'Shreya Sunil',
     image: new URL('../../../members/14.png', import.meta.url).href,
+    role: 'Member',
     url: 'https://aiforgood.itu.int/speaker/shreya-sunil/'
   },
   {
     name: 'Lukas Claes',
     image: new URL('../../../members/15.png', import.meta.url).href,
+    role: 'Member',
     url: 'https://aiforgood.itu.int/speaker/lukas-claes/'
   },
   {
     name: 'Jannis Becktepe',
     image: new URL('../../../members/16.png', import.meta.url).href,
+    role: 'Member',
     url: 'https://aiforgood.itu.int/speaker/jannis-becktepe/'
   },
   {
     name: 'Ghassan Al Dahik',
     image: new URL('../../../members/17.png', import.meta.url).href,
+    role: 'Member',
     url: 'https://aiforgood.itu.int/speaker/ghassan-al-dahik/'
   },
   {
     name: 'Rean Clive Fernandes',
     image: new URL('../../../members/18.png', import.meta.url).href,
+    role: 'Member',
     url: 'https://aiforgood.itu.int/speaker/rean-clive-fernandes/'
   }
 ];
@@ -106,12 +124,7 @@ function WebIcon() {
   );
 }
 
-function getMemberPosition(image: string) {
-  if (image.endsWith('1.png')) return 'Hub Leader';
-  if (image.endsWith('2.png')) return 'Impact Lead';
-  if (image.endsWith('3.png')) return 'Regional Lead';
-  return 'Member';
-}
+// Roles are provided per-member in the `members` array.
 
 function MembersSection() {
   const { t } = useTranslation();
@@ -165,7 +178,7 @@ function MembersSection() {
               <div className="member-card-body">
                 <div>
                   <h3 className="member-name">{member.name}</h3>
-                  <p className="member-position">{getMemberPosition(member.image)}</p>
+                  <p className="member-position">{member.role}</p>
                 </div>
                 <a
                   className="member-linkedin"
@@ -195,8 +208,8 @@ function MembersSection() {
               ×
             </button>
             <img src={selectedMember.image} alt={selectedMember.name} className="member-image-modal__image" />
-            <div className="member-image-modal__caption">
-              <h3>{getMemberPosition(selectedMember.image) + ": " + selectedMember.name}</h3>
+              <div className="member-image-modal__caption">
+              <h3>{selectedMember.role + ": " + selectedMember.name}</h3>
               <a href={selectedMember.url} target="_blank" rel="noreferrer">
                 {t('members.webLabel', { name: selectedMember.name })}
               </a>
